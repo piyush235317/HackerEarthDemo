@@ -28,7 +28,7 @@ export default function SetupLayout({ children }) {
       <header className={styles.topBar}>
         <div className={styles.topBarLeft}>
           <HackerEarthLogo size={22} />
-          <span className={styles.testName}>Practice test</span>
+          <span className={styles.testName}>EXL Digital Campus Test</span>
         </div>
         <button className={styles.themeBtn} aria-label="Theme">
           <svg className={styles.sunIcon} viewBox="0 0 24 24">

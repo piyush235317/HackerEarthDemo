@@ -8,14 +8,14 @@
 }
 
 :root {
-  /* Background colors - matching user image dark theme */
-  --bg-primary: #18181b;
-  --bg-secondary: #141417;
+  /* Background colors - matte charcoal black from user screenshot */
+  --bg-primary: #121214;
+  --bg-secondary: #0e0e10;
   --bg-surface: rgba(255, 255, 255, 0.04);
   --bg-surface-hover: rgba(255, 255, 255, 0.08);
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-border: rgba(255, 255, 255, 0.08);
-  --bg-topbar: rgba(24, 24, 27, 0.85);
+  --bg-topbar: #121214;
 
   /* Text colors */
   --text-primary: #ffffff;
@@ -24,19 +24,19 @@
   --text-link: #38bdf8;
 
   /* Accent & Button colors from user image */
-  --btn-primary: #385192;
-  --btn-primary-hover: #4562ab;
+  --btn-primary: #2563eb;
+  --btn-primary-hover: #1d4ed8;
   --accent-cyan: #38bdf8;
   --accent-cyan-dark: #0284c7;
-  --accent-blue: #385192;
-  --accent-blue-dark: #2d4177;
+  --accent-blue: #2563eb;
+  --accent-blue-dark: #1d4ed8;
   --accent-green: #22c55e;
   --accent-amber: #f59e0b;
   --accent-red: #ef4444;
 
   /* Gradients */
-  --gradient-cyan: linear-gradient(135deg, #385192 0%, #4562ab 100%);
-  --gradient-bg: #18181b;
+  --gradient-cyan: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-bg: #121214;
 
   /* Borders */
   --border-subtle: rgba(255, 255, 255, 0.06);
@@ -66,7 +66,7 @@ body {
   font-family: var(--font-family);
   font-size: 17px;
   line-height: 1.55;
-  background: #18181b;
+  background: #121214;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

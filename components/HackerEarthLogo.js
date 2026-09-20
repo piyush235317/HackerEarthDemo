@@ -7,9 +7,9 @@ export default function HackerEarthLogo({ text = 'H', size = 22, className }) {
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        backgroundColor: '#000000',
-        borderRadius: '5px',
-        border: '1px solid rgba(255, 255, 255, 0.14)',
+        backgroundColor: 'rgba(255, 255, 255, 0.22)',
+        borderRadius: '6px',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',

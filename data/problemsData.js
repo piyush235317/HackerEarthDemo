@@ -1,66 +1,22 @@
 export const problemsData = [
   {
     "id": 1,
-    "category": "Aptitude & Reasoning",
-    "title": "An express passenger train measuring 180 meters in total length travels along a straight railway track at a uniform speed of 54 km/hr. Upon approaching an intermediate station, the train enters and completely traverses a passenger platform in exactly 28 seconds, measured from the moment the front locomotive enters the platform to the moment the rear coach clears the platform end. What is the total physical length of the platform in meters?",
-    "snippet": null,
+    "category": "Logical Reasoning",
+    "passageHeader": "Study the provided information and answer the following questions:",
+    "title": "Who is third to the left of E?",
+    "snippet": "A, B, C, D, E, F, G, and H are sitting in a circle facing the center. E is second to the left of A and third to the right of G. D is second to the right of H, who is to the immediate right of E. B is third to the right of F.",
     "type": "MCQ",
     "score": "2.00",
     "options": [
-      "240 meters",
-      "210 meters",
-      "270 meters",
-      "300 meters"
+      "A",
+      "F",
+      "G",
+      "H"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2
   },
   {
     "id": 2,
-    "category": "Aptitude & Reasoning",
-    "title": "Pipe A can fill a tank in 12 hours and Pipe B in 15 hours. Both are opened together, but after 3 hours Pipe A is closed. How many additional hours will Pipe B take to fill the tank?",
-    "snippet": null,
-    "type": "MCQ",
-    "score": "2.00",
-    "options": [
-      "8.25 hours (8 hours 15 mins)",
-      "7.5 hours",
-      "9 hours",
-      "6.75 hours"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 3,
-    "category": "Aptitude & Reasoning",
-    "title": "An article is marked 40% above its cost price and sold at a 25% discount. What is the merchant's net profit or loss percentage?",
-    "snippet": null,
-    "type": "MCQ",
-    "score": "2.00",
-    "options": [
-      "5% Profit",
-      "5% Loss",
-      "10% Profit",
-      "No profit no loss"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 4,
-    "category": "Aptitude & Reasoning",
-    "title": "In how many different ways can the letters of the word 'LEADING' be arranged so that the vowels always come together?",
-    "snippet": null,
-    "type": "MCQ",
-    "score": "2.00",
-    "options": [
-      "720",
-      "120",
-      "360",
-      "240"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 5,
     "category": "Aptitude & Reasoning",
     "title": "In a game of chance at a statistical demonstration, two standard, balanced six-sided dice (each with faces numbered 1 through 6) are rolled simultaneously onto a flat surface. Assuming all 36 possible ordered outcomes are equally likely, what is the exact mathematical probability that the sum of the numbers appearing on the top faces is a prime number?",
     "snippet": null,
@@ -87,10 +43,26 @@ export const problemsData = [
       "15"
     ],
     "correctAnswer": 0,
-    "id": 6
+    "id": 3
   },
   {
-    "id": 7,
+    "id": 4,
+    "category": "Logical Reasoning",
+    "passageHeader": "Study the provided information and answer the following questions:",
+    "title": "Who sits to the immediate left of R?",
+    "snippet": "P, Q, R, S, T, U, V, and W are sitting around a circular table facing the center. P sits third to the right of W and third to the left of Q. S sits second to the right of T. R sits second to the left of V who is not an immediate neighbor of P or W.",
+    "type": "MCQ",
+    "score": "2.00",
+    "options": [
+      "T",
+      "S",
+      "Q",
+      "P"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 5,
     "category": "Aptitude & Reasoning",
     "title": "A sum of money amounts to Rs. 4,840 in 2 years and Rs. 5,324 in 3 years at compound interest compounded annually. What is the annual interest rate?",
     "snippet": null,
@@ -105,7 +77,23 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 8,
+    "id": 6,
+    "category": "Logical Reasoning",
+    "passageHeader": "Study the provided information and answer the following questions:",
+    "title": "Which of the following pairs represents the immediate neighbors of G?",
+    "snippet": "A, B, C, D, E, F, G, and H are sitting around a square table in such a way that four of them sit at four corners facing outside while four sit in the middle of the four sides facing inside. A sits third to the right of H. G sits third to the left of C. C is not an immediate neighbor of H.",
+    "type": "MCQ",
+    "score": "2.00",
+    "options": [
+      "F and E",
+      "B and D",
+      "A and H",
+      "C and F"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
     "category": "Aptitude & Reasoning",
     "title": "A 60-liter mixture contains milk and water in the ratio 2:1. How many liters of water must be added to make the ratio 1:2?",
     "snippet": null,
@@ -116,6 +104,22 @@ export const problemsData = [
       "40 liters",
       "50 liters",
       "30 liters"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 8,
+    "category": "Logical Reasoning",
+    "passageHeader": "Study the provided information and answer the following questions:",
+    "title": "What is the position of C with respect to A?",
+    "snippet": "A, B, C, D, E, F, G, and H are sitting in a circle facing the center. E is second to the left of A and third to the right of G. D is second to the right of H, who is to the immediate right of E. B is third to the right of F.",
+    "type": "MCQ",
+    "score": "2.00",
+    "options": [
+      "Fourth to the left",
+      "Second to the right",
+      "Immediate left",
+      "Third to the right"
     ],
     "correctAnswer": 0
   },
@@ -136,6 +140,22 @@ export const problemsData = [
   },
   {
     "id": 10,
+    "category": "Logical Reasoning",
+    "passageHeader": "Study the provided information and answer the following questions:",
+    "title": "Who is sitting at the extreme right end of the row?",
+    "snippet": "Eight persons A, B, C, D, E, F, G, and H are sitting in a straight row facing North. A sits third to the left of D. Neither A nor D sits at an extreme end. Only two people sit between E and G. C is an immediate neighbor of both B and F. H sits second to the right of G.",
+    "type": "MCQ",
+    "score": "2.00",
+    "options": [
+      "H",
+      "G",
+      "F",
+      "E"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 11,
     "category": "Aptitude & Reasoning",
     "title": "A psychometric quantitative evaluation presents the following progressive numerical sequence: 3, 7, 16, 35, 74, ... Based on identifying the underlying recursive mathematical transformation that generates each successive term from its predecessor, what is the next number that should follow 74 in the series?",
     "snippet": null,
@@ -150,7 +170,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 11,
+    "id": 12,
     "category": "Aptitude & Reasoning",
     "title": "At what time between 4 and 5 o'clock will the hands of a clock point in opposite directions (angle of 180 degrees)?",
     "snippet": null,
@@ -177,10 +197,10 @@ export const problemsData = [
       "35"
     ],
     "correctAnswer": 0,
-    "id": 12
+    "id": 13
   },
   {
-    "id": 13,
+    "id": 14,
     "category": "Aptitude & Reasoning",
     "title": "In a certain code language, 'COMPUTER' is written as 'RFUVQNPC'. How is 'MEDICINE' written in that code?",
     "snippet": null,
@@ -195,7 +215,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 14,
+    "id": 15,
     "category": "Aptitude & Reasoning",
     "title": "A man walks 30 meters South, turns left and walks 40 meters, then turns left again and walks 30 meters. In which direction and how far is he from his starting point?",
     "snippet": null,
@@ -210,7 +230,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 15,
+    "id": 16,
     "category": "Aptitude & Reasoning",
     "title": "Evaluate the logical validity of the following syllogism based strictly on the given premises without assuming external real-world knowledge:\nStatements:\n1. All cars are vehicles.\n2. Some vehicles are electric.\nConclusions:\nI. Some cars are electric.\nII. Some electric are vehicles.\nWhich of the conclusions logically follows from the statements?",
     "snippet": null,
@@ -225,7 +245,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 16,
+    "id": 17,
     "category": "Aptitude & Reasoning",
     "title": "Contractor A can complete a construction project in 12 days, while Contractor B requires 18 days. If both contractors work together, in how many days will the project be completed?",
     "snippet": null,
@@ -240,7 +260,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 17,
+    "id": 18,
     "category": "Aptitude & Reasoning",
     "title": "A boat travels 24 km downstream in 3 hours and 16 km upstream in 4 hours. What is the speed of the water current?",
     "snippet": null,
@@ -267,10 +287,10 @@ export const problemsData = [
       "24"
     ],
     "correctAnswer": 0,
-    "id": 18
+    "id": 19
   },
   {
-    "id": 19,
+    "id": 20,
     "category": "Aptitude & Reasoning",
     "title": "Six team members P, Q, R, S, T, and U sit in a straight row facing North. P is adjacent to Q and S. T sits at an extreme end. Who is sitting in the exact middle?",
     "snippet": null,
@@ -285,7 +305,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 20,
+    "id": 21,
     "category": "Aptitude & Reasoning",
     "title": "Calendar arithmetic problems rely on modular cycles of solar leap and non-leap years. Taking into account the standard Gregorian calendar rules, leap year distributions, and odd-day calculations across centuries, determine what specific day of the week India attained its independence on the historic date of 15th August 1947.",
     "snippet": null,
@@ -300,7 +320,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 21,
+    "id": 22,
     "category": "Aptitude & Reasoning",
     "title": "The calculated arithmetic mean of 40 student examination scores is 68. If two scores of 82 and 74 are excluded, what is the new average of the remaining 38 students?",
     "snippet": null,
@@ -315,7 +335,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 22,
+    "id": 23,
     "category": "Aptitude & Reasoning",
     "title": "From a standard shuffled deck of 52 playing cards, two cards are drawn at random without replacement. What is the probability that both cards are Kings?",
     "snippet": null,
@@ -330,7 +350,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 23,
+    "id": 24,
     "category": "Aptitude & Reasoning",
     "title": "A wholesale merchant sells two identical commercial units for Rs. 9,900 each, gaining 10% on one and losing 10% on the other. What is the net overall profit or loss percentage?",
     "snippet": null,
@@ -357,10 +377,10 @@ export const problemsData = [
       "8"
     ],
     "correctAnswer": 0,
-    "id": 24
+    "id": 25
   },
   {
-    "id": 25,
+    "id": 26,
     "category": "Aptitude & Reasoning",
     "title": "Examine the numerical properties and progression patterns of the following collection of positive integers: 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728. One of these numbers deviates from a shared higher-order mathematical classification common to the rest of the list. Which number is the odd one out?",
     "snippet": null,
@@ -375,7 +395,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 26,
+    "id": 27,
     "category": "Aptitude & Reasoning",
     "title": "If 12 men or 18 women can harvest an agricultural field in 14 days, in how many days can 8 men and 16 women harvest the same field?",
     "snippet": null,
@@ -390,7 +410,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 27,
+    "id": 28,
     "category": "Aptitude & Reasoning",
     "title": "A storage vessel contains 50 liters of pure chemical liquid. 5 liters are withdrawn and replaced with water, and this cycle is repeated once more. How many liters of pure chemical remain?",
     "snippet": null,
@@ -405,7 +425,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 28,
+    "id": 29,
     "category": "Aptitude & Reasoning",
     "title": "In a corporate group of 60 employees, 35 drink tea, 25 drink coffee, and 12 drink both. How many employees drink neither tea nor coffee?",
     "snippet": null,
@@ -420,7 +440,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 29,
+    "id": 30,
     "category": "Aptitude & Reasoning",
     "title": "A retail street confectionery merchant invests working capital into purchasing bulk toffees at the wholesale rate of 6 toffees for one rupee. To achieve an overall profit margin of 20% on the capital outlay, how many toffees should the merchant dispense per rupee to retail consumers?",
     "snippet": null,
@@ -447,10 +467,10 @@ export const problemsData = [
       "8"
     ],
     "correctAnswer": 0,
-    "id": 30
+    "id": 31
   },
   {
-    "id": 31,
+    "id": 32,
     "category": "Deep Learning",
     "title": "You are training a deep convolutional network for automated visual defect inspection using stochastic gradient descent with momentum. After several training epochs, you observe in TensorBoard that a substantial fraction of the hidden units in intermediate layers consistently output exactly 0.0 across the entire evaluation batch, and their corresponding weight gradients remain zero throughout subsequent epochs, effectively deactivating them permanently from learning. Which of the following activation functions is inherently most vulnerable to this \"dying unit\" degradation during backpropagation?",
     "snippet": null,
@@ -465,7 +485,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 32,
+    "id": 33,
     "category": "Deep Learning",
     "title": "What is the primary architectural purpose of skip (residual) connections in ResNet architectures?",
     "snippet": null,
@@ -480,7 +500,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 33,
+    "id": 34,
     "category": "Deep Learning",
     "title": "In Transformer multi-head self-attention, what is the computational complexity of computing attention scores with sequence length L and hidden dimension d?",
     "snippet": null,
@@ -495,7 +515,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 34,
+    "id": 35,
     "category": "Deep Learning",
     "title": "Why is Layer Normalization preferred over Batch Normalization in Transformer models for NLP tasks?",
     "snippet": null,
@@ -510,7 +530,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 35,
+    "id": 36,
     "category": "Deep Learning",
     "title": "An automated algorithmic trading platform utilizes a Long Short-Term Memory (LSTM) recurrent neural network to analyze continuous high-frequency tick data streams and predict price movement directions. As new temporal observations x_t and hidden states h_{t-1} arrive at each recurrent step, the cell must selectively purge outdated historical trends and retain meaningful long-range dependencies from the previous cell state C_{t-1}. Which internal gate mechanism in the LSTM formulation is mathematically responsible for computing the element-wise decay factor applied to C_{t-1}?",
     "snippet": null,
@@ -525,7 +545,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 36,
+    "id": 37,
     "category": "Deep Learning",
     "title": "Consider a 2D convolution on an input of size 32x32 with kernel size 5x5, stride 1, and padding 2. What is the spatial dimension of the output feature map?",
     "snippet": null,
@@ -540,7 +560,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 37,
+    "id": 38,
     "category": "Deep Learning",
     "title": "What critical modification does the AdamW optimizer introduce compared to the standard Adam optimizer with L2 penalty?",
     "snippet": null,
@@ -555,7 +575,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 38,
+    "id": 39,
     "category": "Deep Learning",
     "title": "Why is Focal Loss commonly used in single-stage object detectors like RetinaNet instead of standard Cross-Entropy loss?",
     "snippet": null,
@@ -570,7 +590,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 39,
+    "id": 40,
     "category": "Deep Learning",
     "title": "Dropout is a widely adopted regularization technique applied during the training phase of deep neural networks to prevent complex co-adaptations between hidden units by randomly deactivating each neuron with a retention probability (1 - p). Once training is completed and the frozen model is deployed to an edge production environment for deterministic low-latency inference, how are the weights and activations of the dropout layers configured to maintain consistent expected output scales?",
     "snippet": null,
@@ -585,7 +605,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 40,
+    "id": 41,
     "category": "Deep Learning",
     "title": "What is the primary purpose of adding a gradient penalty in WGAN-GP (Wasserstein GAN with Gradient Penalty)?",
     "snippet": null,
@@ -600,7 +620,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 41,
+    "id": 42,
     "category": "Deep Learning",
     "title": "Which weight initialization scheme is specifically designed for deep networks using ReLU activations to avoid vanishing/exploding gradients?",
     "snippet": null,
@@ -615,7 +635,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 42,
+    "id": 43,
     "category": "Deep Learning",
     "title": "In biometric facial verification and open-set metric learning, what is the core objective of the Triplet Loss function?",
     "snippet": null,
@@ -630,7 +650,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 43,
+    "id": 44,
     "category": "Deep Learning",
     "title": "During knowledge distillation, a compact student network is trained using soft probability distributions produced by a large, pre-trained teacher model. Similarly, in generative autoregressive language models, the Softmax logits are often scaled by a scalar hyperparameter T before calculating categorical probabilities: p_i = exp(z_i / T) / sum(exp(z_j / T)). What specific mathematical effect does setting T > 1 have on the resulting output probability distribution?",
     "snippet": "P(y_i) = exp(z_i / T) / sum_j(exp(z_j / T))",
@@ -645,7 +665,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 44,
+    "id": 45,
     "category": "Deep Learning",
     "title": "What is the primary architectural advantage of Depthwise Separable Convolutions in MobileNet compared to standard 2D convolutions?",
     "snippet": null,
@@ -660,7 +680,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 45,
+    "id": 46,
     "category": "Deep Learning",
     "title": "What standard technique is employed to prevent gradient explosion during backpropagation through time in recurrent neural networks?",
     "snippet": null,
@@ -675,7 +695,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 46,
+    "id": 47,
     "category": "Deep Learning",
     "title": "In self-supervised contrastive learning (such as SimCLR), what is the primary role of the InfoNCE (NT-Xent) loss?",
     "snippet": null,
@@ -690,7 +710,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 47,
+    "id": 48,
     "category": "Deep Learning",
     "title": "When training vanilla Recurrent Neural Networks (RNNs) and deep sequential models on long text sequences, the recurrent matrix multiplications during backpropagation can produce gradients with excessively large Euclidean norms, causing catastrophic parameter updates, numerical NaN overflows, and optimization instability. Why is the gradient clipping technique (such as clipping by global norm) universally implemented as a safeguard during RNN training?",
     "snippet": null,
@@ -705,7 +725,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 48,
+    "id": 49,
     "category": "Deep Learning",
     "title": "In Variational Autoencoders (VAEs), why is the reparameterization trick necessary during backpropagation?",
     "snippet": null,
@@ -720,7 +740,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 49,
+    "id": 50,
     "category": "Deep Learning",
     "title": "How does the effective receptive field of a deep CNN grow when stacking two consecutive 3x3 convolutional layers with stride 1?",
     "snippet": null,
@@ -735,7 +755,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 50,
+    "id": 51,
     "category": "Deep Learning",
     "title": "When fine-tuning a pre-trained CNN on a small domain-specific dataset, which layer weights should typically be updated first?",
     "snippet": null,
@@ -750,7 +770,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 51,
+    "id": 52,
     "category": "Deep Learning",
     "title": "In semantic image segmentation architectures (such as DeepLab), maintaining high spatial resolution while aggregating broad contextual information from distant pixels is critical. Standard pooling operations increase the receptive field but discard spatial detail, whereas large convolutional kernels dramatically increase parameters. How do Dilated (Atrous) Convolutions successfully expand the effective receptive field across feature maps without introducing additional learnable parameters?",
     "snippet": null,
@@ -765,7 +785,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 52,
+    "id": 53,
     "category": "Deep Learning",
     "title": "Why do Transformer encoders require Positional Encodings added to input token embeddings?",
     "snippet": null,
@@ -780,7 +800,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 53,
+    "id": 54,
     "category": "Deep Learning",
     "title": "Which metric is most widely used to evaluate both the visual quality and diversity of samples generated by GANs?",
     "snippet": null,
@@ -795,7 +815,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 54,
+    "id": 55,
     "category": "Deep Learning",
     "title": "Why is Rotary Position Embedding (RoPE) widely preferred in modern LLMs over absolute learned positional embeddings?",
     "snippet": "GELU(x) = x * Phi(x), where Phi(x) is the standard Gaussian cumulative distribution function.",
@@ -810,7 +830,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 55,
+    "id": 56,
     "category": "Deep Learning",
     "title": "To deploy deep neural networks efficiently on resource-constrained hardware accelerators (such as edge TPUs and mobile NPUs), models often undergo precision reduction from 32-bit floating point (FP32) to 8-bit integer (INT8). Which specific quantization workflow directly converts pre-trained floating-point weights and activation ranges into fixed-point representations using calibration data, without requiring a complete re-training cycle?",
     "snippet": null,
@@ -825,7 +845,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 56,
+    "id": 57,
     "category": "Azure Cloud",
     "title": "An enterprise healthcare platform generates gigabytes of raw diagnostic scan images daily. Regulatory compliance mandates that these medical records must be retained securely for a minimum of seven years, but individual records are almost never accessed after 180 days unless specifically requested by an auditor. The organization seeks to minimize cloud storage expenses as aggressively as possible and accepts that retrieving any archived file may take up to 15 hours. Which Azure Blob Storage access tier is optimal for this archival workload?",
     "snippet": null,
@@ -840,7 +860,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 57,
+    "id": 58,
     "category": "Azure Cloud",
     "title": "Which Azure service provides a private dedicated network connection from an on-premises datacenter to Azure without traversing the public internet?",
     "snippet": null,
@@ -855,7 +875,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 58,
+    "id": 59,
     "category": "Azure Cloud",
     "title": "In Azure Cosmos DB, which consistency level offers the highest throughput and lowest latency while providing no guarantee of read ordering?",
     "snippet": null,
@@ -870,7 +890,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 59,
+    "id": 60,
     "category": "Azure Cloud",
     "title": "Which Azure service provides centralized secret management, encryption keys, and SSL/TLS certificates with hardware security module (HSM) backing?",
     "snippet": null,
@@ -885,7 +905,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 60,
+    "id": 61,
     "category": "Azure Cloud",
     "title": "An administrator manages an Azure Virtual Machine used for periodic batch report generation. When developers complete their workloads, they frequently execute \"sudo shutdown -h now\" from within the VM operating system console. Later, the billing administrator notices that hourly VM compute charges are still accumulating. What is the fundamental difference between shutting down an Azure VM from inside the guest OS versus issuing a \"Stop\" command from the Azure Portal or Azure CLI?",
     "snippet": null,
@@ -900,7 +920,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 61,
+    "id": 62,
     "category": "Azure Cloud",
     "title": "Which Azure load-balancing service operates at Layer 7 (HTTP/HTTPS) and provides SSL offloading, URL-based routing, and cookie-based session affinity?",
     "snippet": null,
@@ -915,7 +935,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 62,
+    "id": 63,
     "category": "Azure Cloud",
     "title": "In Azure Kubernetes Service (AKS), which network plugin assigns real routable VNet IP addresses directly to individual pods?",
     "snippet": null,
@@ -930,7 +950,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 63,
+    "id": 64,
     "category": "Azure Cloud",
     "title": "Which Azure messaging service is designed specifically for enterprise transactional messaging with strict FIFO ordering and duplicate detection?",
     "snippet": null,
@@ -945,7 +965,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 64,
+    "id": 65,
     "category": "Azure Cloud",
     "title": "A document processing application needs to automatically invoke an OCR extraction workflow whenever a new PDF invoice is uploaded by a client into an Azure Blob Storage container. The workflow must execute serverless code with zero idle compute cost and trigger within seconds of blob creation. Which Azure architectural pattern provides the most scalable, decoupled event-driven integration between Blob Storage and Azure Functions?",
     "snippet": null,
@@ -960,7 +980,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 65,
+    "id": 66,
     "category": "Azure Cloud",
     "title": "Which Azure security feature filters network traffic to and from Azure resources within an Azure Virtual Network using IP, port, and protocol rules?",
     "snippet": null,
@@ -975,7 +995,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 66,
+    "id": 67,
     "category": "Azure Cloud",
     "title": "In Azure RBAC, what is the recommended practice for granting permissions when custom roles are needed across multiple resource groups?",
     "snippet": null,
@@ -990,7 +1010,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 67,
+    "id": 68,
     "category": "Azure Cloud",
     "title": "Which native Azure service enables deploying and managing infrastructure declaratively using Bicep or ARM JSON templates?",
     "snippet": null,
@@ -1005,7 +1025,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 68,
+    "id": 69,
     "category": "Azure Cloud",
     "title": "An enterprise data platform requires high-availability storage for mission-critical relational backups. To protect against localized datacenter failures (such as power outages, cooling system breakdowns, or physical flooding affecting an entire datacenter building), the replication policy must distribute data across three physically separated datacenter facilities within the same geographic Azure region. Which Azure Storage redundancy option satisfies this requirement?",
     "snippet": null,
@@ -1020,7 +1040,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 69,
+    "id": 70,
     "category": "Azure Cloud",
     "title": "What is the simplest and lowest-latency method to connect two Azure Virtual Networks across different regions?",
     "snippet": null,
@@ -1035,7 +1055,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 70,
+    "id": 71,
     "category": "Azure Cloud",
     "title": "Which feature allows an Azure App Service application to access Azure Key Vault securely without storing credentials in code or configuration files?",
     "snippet": null,
@@ -1050,7 +1070,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 71,
+    "id": 72,
     "category": "Azure Cloud",
     "title": "What deployment feature in Azure App Service enables zero-downtime deployments by staging new code before swapping with production?",
     "snippet": null,
@@ -1065,7 +1085,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 72,
+    "id": 73,
     "category": "Azure Cloud",
     "title": "A data engineering division is establishing an enterprise cloud lakehouse platform to run distributed Apache Spark batch transformations, streaming aggregations, and collaborative Python/Scala notebooks against data stored in Azure Data Lake Storage Gen2. Which unified Azure cloud service provides a turnkey managed Apache Spark analytics environment natively integrated with Azure security and monitoring?",
     "snippet": null,
@@ -1080,7 +1100,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 73,
+    "id": 74,
     "category": "Azure Cloud",
     "title": "Which Azure service allows administrators to enforce organizational standards and assess compliance across subscriptions at scale through guardrails?",
     "snippet": null,
@@ -1095,7 +1115,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 74,
+    "id": 75,
     "category": "Azure Cloud",
     "title": "Which feature securely connects an on-premises network to an Azure SQL Database instance using a private IP address in an Azure VNet?",
     "snippet": null,
@@ -1110,7 +1130,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 75,
+    "id": 76,
     "category": "Azure Cloud",
     "title": "Which Azure DevOps service provides automated continuous integration and continuous delivery (CI/CD) pipelines?",
     "snippet": null,
@@ -1125,7 +1145,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 76,
+    "id": 77,
     "category": "Azure Cloud",
     "title": "A cloud operations team requires a unified monitoring solution to collect performance metrics, diagnostic telemetry, structured application traces, and container logs across hundreds of microservices deployed on Azure and on-premises servers. The platform must provide live distributed tracing (APM), automated anomaly alerts, and a centralized Kusto Query Language (KQL) search engine. Which Azure service fulfills this comprehensive monitoring role?",
     "snippet": null,
@@ -1140,7 +1160,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 77,
+    "id": 78,
     "category": "Azure Cloud",
     "title": "When deploying an Azure Virtual Machine, which disk storage tier provides single-digit millisecond latency and the highest IOPS for I/O-intensive workloads?",
     "snippet": null,
@@ -1155,7 +1175,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 78,
+    "id": 79,
     "category": "Azure Cloud",
     "title": "Which service routes incoming client web requests to the lowest-latency regional endpoint across global data centers using anycast?",
     "snippet": null,
@@ -1170,7 +1190,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 79,
+    "id": 80,
     "category": "Azure Cloud",
     "title": "Which VM pricing model offers up to 90% discount for fault-tolerant workloads that can handle sudden preemption?",
     "snippet": null,
@@ -1185,7 +1205,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 80,
+    "id": 81,
     "category": "Azure Cloud",
     "title": "An enterprise cloud administrator wants to prevent accidental deletion or unauthorized modification of mission-critical production resources, such as production virtual networks, key vaults, and primary databases. Even administrators with Owner permissions should be blocked from deleting these assets until an explicit governance guardrail is removed. Which Azure resource management mechanism enforces this protection?",
     "snippet": null,
@@ -1200,7 +1220,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 81,
+    "id": 82,
     "category": "Pseudocode & Algorithms",
     "title": "Analyze the following procedural execution snippet featuring variable reassignment, arithmetic operations, and sequential incrementation. Trace the state transitions of variables p, q, and r from initialization through the final arithmetic summation to determine the exact value output by the print statement.",
     "snippet": "Integer a, b, c\nSet a = 12, b = 7\nc = a ^ b\nPrint c",
@@ -1215,7 +1235,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 82,
+    "id": 83,
     "category": "Pseudocode & Algorithms",
     "title": "What will be the return value of the recursive function solve(4, 3)?",
     "snippet": "Function solve(Integer a, Integer b)\n    If (b == 0)\n        return 1\n    End If\n    If (b % 2 == 0)\n        Integer temp = solve(a, b / 2)\n        return temp * temp\n    Else\n        return a * solve(a, b - 1)\n    End If\nEnd Function",
@@ -1230,7 +1250,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 83,
+    "id": 84,
     "category": "Pseudocode & Algorithms",
     "title": "What will be printed as the final value of count after the following nested loops terminate?",
     "snippet": "Integer i, j, count = 0\nFor i = 1 to 4\n    For j = 1 to i\n        count = count + (i * j)\n    End For\nEnd For\nPrint count",
@@ -1245,7 +1265,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 84,
+    "id": 85,
     "category": "Pseudocode & Algorithms",
     "title": "What is the output of the following bitwise operation snippet?",
     "snippet": "Integer n = 29\nInteger count = 0\nWhile (n > 0)\n    n = n & (n - 1)\n    count = count + 1\nEnd While\nPrint count",
@@ -1260,7 +1280,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 85,
+    "id": 86,
     "category": "Pseudocode & Algorithms",
     "title": "Review the following algorithm which passes integer variables through conditional branch comparisons, logical operators, and modular arithmetic checks. Determine which execution path is satisfied and identify the final values assigned and printed by the routine.",
     "snippet": "Integer a = 5, b = 10, c = 15\nIf (a > b || c > a && b < c)\n    a = a + b + c\nElse\n    a = a * b\nEnd If\nPrint a",
@@ -1275,7 +1295,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 86,
+    "id": 87,
     "category": "Pseudocode & Algorithms",
     "title": "What value is returned by the recursive function compute(5)?",
     "snippet": "Function fun(Integer n)\n    If (n <= 1)\n        return n\n    End If\n    return fun(n - 1) + fun(n - 2)\nEnd Function",
@@ -1290,7 +1310,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 87,
+    "id": 88,
     "category": "Pseudocode & Algorithms",
     "title": "What is the output of the following array manipulation routine?",
     "snippet": "Integer arr[] = {2, 4, 6, 8, 10}\nInteger i, result = 0\nFor i = 0 to 4\n    If (i % 2 == 0)\n        result = result + arr[i]\n    Else\n        result = result - arr[i]\n    End If\nEnd For\nPrint result",
@@ -1305,7 +1325,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 88,
+    "id": 89,
     "category": "Pseudocode & Algorithms",
     "title": "What is the asymptotic time complexity of the following loop in terms of n?",
     "snippet": "Function compute(Integer n)\n    Integer i = 1, sum = 0\n    While (i < n)\n        sum = sum + i\n        i = i * 2\n    End While\n    return sum\nEnd Function",
@@ -1320,7 +1340,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 89,
+    "id": 90,
     "category": "Pseudocode & Algorithms",
     "title": "The following procedural routine simulates a Last-In, First-Out (LIFO) Stack abstract data structure, executing a series of sequential push and pop operations intertwined with arithmetic calculations on top-of-stack elements. Trace the stack state sequentially to identify what values are output by the print statement.",
     "snippet": "Stack S\nS.push(10)\nS.push(20)\nInteger x = S.pop()\nS.push(30)\nS.push(40)\nS.pop()\nS.push(x + S.peek())\nPrint S.pop()",
@@ -1335,7 +1355,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 90,
+    "id": 91,
     "category": "Pseudocode & Algorithms",
     "title": "What mathematical operation is computed by the recursive function mystery(a, b)?",
     "snippet": "Function mystery(Integer a, Integer b)\n    While (b != 0)\n        Integer temp = b\n        b = a % b\n        a = temp\n    End While\n    return a\nEnd Function",
@@ -1350,7 +1370,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 91,
+    "id": 92,
     "category": "Pseudocode & Algorithms",
     "title": "What value will be printed after evaluating the following conditional statement?",
     "snippet": "Integer x = 5, y = 3\nx = x << 2\ny = y >> 1\nPrint x + y",
@@ -1365,7 +1385,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 92,
+    "id": 93,
     "category": "Pseudocode & Algorithms",
     "title": "How many times will the inner print statement execute in the following nested loops?",
     "snippet": "Integer i = 1, sum = 0\nWhile (i <= 3)\n    Integer j = 1\n    While (j <= 3)\n        If (i == j)\n            sum = sum + i\n        End If\n        j = j + 1\n    End While\n    i = i + 1\nEnd While\nPrint sum",
@@ -1380,7 +1400,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 93,
+    "id": 94,
     "category": "Pseudocode & Algorithms",
     "title": "The algorithm below performs sequential character array and string operations, manipulating characters using substring extraction, reversal, and concatenation primitives. Trace the string transformations step-by-step to determine the exact output string printed.",
     "snippet": "String s = \"FASTXL\"\nInteger len = s.length()\nString res = \"\"\nFor i = len - 1 down to 0 step 2\n    res = res + s[i]\nEnd For\nPrint res",
@@ -1395,7 +1415,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 94,
+    "id": 95,
     "category": "Pseudocode & Algorithms",
     "title": "Assuming arguments are passed by reference, what are the final values of x and y after calling swap(x, y)?",
     "snippet": "Function swapAdd(ref Integer a, ref Integer b)\n    a = a + b\n    b = a - b\n    a = a - b\nEnd Function\n\nMain:\n    Integer x = 15, y = 25\n    swapAdd(x, y)\n    Print x, y",
@@ -1410,7 +1430,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 95,
+    "id": 96,
     "category": "Pseudocode & Algorithms",
     "title": "What is the final value of the integer result after evaluating the following expression?",
     "snippet": "Integer p = 8, q = 12\nInteger r\nr = (p > q) ? (p - q) : ((q % p == 0) ? (q / p) : (q % p))\nPrint r",
@@ -1425,7 +1445,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 96,
+    "id": 97,
     "category": "Pseudocode & Algorithms",
     "title": "What is the worst-case time complexity to build a binary max-heap of n elements using the bottom-up Heapify method?",
     "snippet": null,
@@ -1440,7 +1460,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 97,
+    "id": 98,
     "category": "Pseudocode & Algorithms",
     "title": "The algorithm below traverses a 2D integer matrix of dimensions M x N using nested loops to accumulate elements along a specific traversal order (such as diagonal, anti-diagonal, or boundary traversal). Determine the final computed output generated by the matrix traversal.",
     "snippet": "Integer M[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}\nInteger diagSum = 0, i\nFor i = 0 to 2\n    diagSum = diagSum + M[i][2 - i]\nEnd For\nPrint diagSum",
@@ -1455,7 +1475,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 98,
+    "id": 99,
     "category": "Pseudocode & Algorithms",
     "title": "What is the time complexity of the recursive power(base, exp) function that uses divide-and-conquer?",
     "snippet": "Function power(Integer base, Integer exp)\n    If (exp == 0) return 1\n    If (exp == 1) return base\n    return base * power(base, exp - 1)\nEnd Function",
@@ -1470,7 +1490,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 99,
+    "id": 100,
     "category": "Pseudocode & Algorithms",
     "title": "What element is returned by findKthSmallest(arr, 3) on the array [7, 10, 4, 3, 20, 15]?",
     "snippet": "Function findVal(Integer arr[], Integer n)\n    Integer val = arr[0], i\n    For i = 1 to n - 1\n        If (arr[i] > val)\n            val = arr[i]\n        End If\n    End For\n    return val\nEnd Function",
@@ -1485,7 +1505,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 100,
+    "id": 101,
     "category": "Pseudocode & Algorithms",
     "title": "What is the evaluated result of the nested ternary expression shown below?",
     "snippet": "Integer score = 78\nString grade\ngrade = (score >= 90) ? \"A\" : ((score >= 75) ? \"B\" : ((score >= 60) ? \"C\" : \"D\"))\nPrint grade",
@@ -1500,7 +1520,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 101,
+    "id": 102,
     "category": "Pseudocode & Algorithms",
     "title": "Trace the following algorithmic loop which uses multiple loop control variables incremented and decremented at different rates with a break condition. What is the final value output by the print statement when the loop terminates?",
     "snippet": "Integer a = 1, b = 2, c = 3\na = a + b\nb = c - a\nc = a + b + c\nPrint a, b, c",
@@ -1515,7 +1535,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 102,
+    "id": 103,
     "category": "Pseudocode & Algorithms",
     "title": "What sequence of values is retrieved when enqueue and dequeue operations are performed on the queue as shown below?",
     "snippet": "Queue Q\nQ.enqueue(5)\nQ.enqueue(10)\nQ.enqueue(15)\nInteger a = Q.dequeue()\nQ.enqueue(20)\nInteger b = Q.dequeue()\nPrint a + b",
@@ -1530,7 +1550,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 103,
+    "id": 104,
     "category": "Pseudocode & Algorithms",
     "title": "What will be the printed output of the recursive call test(3)?",
     "snippet": "Function test(Integer n)\n    If (n == 0)\n        return\n    End If\n    Print n\n    test(n - 1)\n    Print n\nEnd Function",
@@ -1545,7 +1565,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 104,
+    "id": 105,
     "category": "Pseudocode & Algorithms",
     "title": "What is the final value printed by the following accumulator loop?",
     "snippet": "Integer total = 0, k\nFor k = 1 to 10 step 2\n    total = total + k\nEnd For\nPrint total",
@@ -1560,7 +1580,7 @@ export const problemsData = [
     "correctAnswer": 0
   },
   {
-    "id": 105,
+    "id": 106,
     "category": "Pseudocode & Algorithms",
     "title": "The following bitwise algorithm utilizes low-level two's complement binary properties (specifically the classic expression x & (x - 1) or x & (-x)) within a while loop. By analyzing how this operation clears or isolates bits in the binary representation of n, determine the final value printed by the algorithm.",
     "snippet": "Integer arr[] = {4, 1, 2, 1, 2}\nInteger uniqueVal = 0, i\nFor i = 0 to 4\n    uniqueVal = uniqueVal ^ arr[i]\nEnd For\nPrint uniqueVal",

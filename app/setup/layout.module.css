@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #18181b;
+  background: #0b0d14;
   color: #ffffff;
 }
 
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  background: rgba(24, 24, 27, 0.95);
+  background: #0b0d14;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: fixed;
   top: 0;

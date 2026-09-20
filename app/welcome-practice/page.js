@@ -13,10 +13,10 @@ export default function WelcomePracticePage() {
 
   return (
     <div className={styles.container}>
-      <TopBar logoText="H" testName="Practice test" />
+      <TopBar logoText="H" testName="EXL Digital Campus Test" />
       <main className={styles.content}>
         <div className={styles.card}>
-          <h1 className={styles.title}>Welcome to the Practice test</h1>
+          <h1 className={styles.title}>Welcome to the EXL Digital Campus Test</h1>
           <p className={styles.subtitle}>
             Yatnish Manik, you&apos;re invited by HackerEarth to take this test and show what you can do!
           </p>
@@ -24,7 +24,7 @@ export default function WelcomePracticePage() {
           <div className={styles.infoTable}>
             <div className={styles.infoRow}>
               <span className={styles.infoLabel}>Test name</span>
-              <span className={styles.infoValue}>Practice test</span>
+              <span className={styles.infoValue}>EXL Digital Campus Test</span>
             </div>
             <div className={styles.infoRow}>
               <span className={styles.infoLabel}>Duration</span>

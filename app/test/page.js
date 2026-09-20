@@ -187,8 +187,11 @@ export default function TestPage() {
             <div className={styles.metricItem}>
               {/* Green Wifi signal - bordered tile */}
               <div className={styles.wifiTile}>
-                <svg className={styles.wifiIcon} viewBox="0 0 24 24">
-                  <path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.5c3.62 0 6.94 1.34 9.48 3.58L12 19.34 2.52 11.08C5.06 8.84 8.38 7.5 12 7.5z" />
+                <svg className={styles.wifiIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                  <line x1="12" y1="20" x2="12.01" y2="20" strokeWidth="3" />
                 </svg>
               </div>
             </div>
@@ -226,10 +229,11 @@ export default function TestPage() {
                 title="Hide timer"
                 aria-label="Hide timer"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z" />
-                  <circle cx="12" cy="12" r="3" />
-                  <line x1="3" y1="21" x2="21" y2="3" />
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                  <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+                  <path d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+                  <line x1="2" y1="2" x2="22" y2="22" />
                 </svg>
               </button>
             </div>
@@ -255,7 +259,7 @@ export default function TestPage() {
           <div className={styles.headerRow}>
             <div>
               <div className={styles.problemsCount}>{activeProblems.length} problems</div>
-              <h1 className={styles.pageTitle}>Practice test : Problems list</h1>
+              <h1 className={styles.pageTitle}>EXL Digital Campus Test : Problems list</h1>
             </div>
 
             <div className={styles.totalScoreInfo}>
@@ -273,7 +277,9 @@ export default function TestPage() {
               return (
                 <div key={problem.id} className={styles.problemCard}>
                   <div className={styles.problemLeft}>
-                    <div className={styles.numberCircle}>{problem.id}</div>
+                    <div className={`${styles.numberCircle} ${isAnswered ? styles.numberCircleSolved : ''}`}>
+                      {problem.id}
+                    </div>
                     <div className={styles.problemContent}>
                       <div className={styles.problemTitle}>
                         {problem.title}
@@ -389,10 +395,10 @@ export default function TestPage() {
                 <div className={styles.questionScrollArea}>
                   {/* Watermark */}
                   <div className={styles.watermarkContainer}>
-                    {[1, 2, 3, 4, 5, 6].map((i) => (
+                    {[1, 2, 3, 4].map((i) => (
                       <div key={i} className={styles.watermarkItem}>
                         <div>mde2025011@iiita.ac.in</div>
-                        <div>2026-09-19 14:09 • UTC</div>
+                        <div>2026-09-20 12:13 • UTC</div>
                       </div>
                     ))}
                   </div>
@@ -413,7 +419,7 @@ export default function TestPage() {
                       <div className={styles.questionHeaderDivider} />
                       {/* Bug / Settings icon cell */}
                       <div className={styles.bugIconCell}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M19 8h-1.81c-.45-.78-1.07-1.45-1.82-1.96l.93-.93a.996.996 0 1 0-1.41-1.41l-1.47 1.47C12.78 5.06 12.06 5 11.3 5c-.76 0-1.48.06-2.12.17L7.71 3.7a.996.996 0 1 0-1.41 1.41l.93.93c-.75.51-1.37 1.18-1.82 1.96H3.5a1 1 0 1 0 0 2h1.61c-.07.32-.11.66-.11 1v1H3.5a1 1 0 1 0 0 2H5v1c0 .34.04.68.11 1H3.5a1 1 0 1 0 0 2h1.91c.62 1.09 1.55 1.97 2.68 2.5l-.8 1.6a1 1 0 1 0 1.79.89l1-2c.69.13 1.4.21 2.12.21.72 0 1.43-.08 2.12-.21l1 2a1 1 0 1 0 1.79-.89l-.8-1.6c1.13-.53 2.06-1.41 2.68-2.5h1.91a1 1 0 1 0 0-2h-1.61c.07-.32.11-.66.11-1v-1h1.5a1 1 0 1 0 0-2h-1.5v-1c0-.34-.04-.68-.11-1h1.61a1 1 0 1 0 0-2zM12 17c-2.76 0-5-2.24-5-5v-2h10v2c0 2.76-2.24 5-5 5z"/>
                         </svg>
                       </div>
@@ -421,11 +427,20 @@ export default function TestPage() {
                   </div>
 
                   <div className={styles.questionBody}>
-                    {currentProblem.title}
-                    {currentProblem.snippet && (
-                      <div className={styles.questionPassageBox}>
-                        {currentProblem.snippet}
-                      </div>
+                    {currentProblem.snippet ? (
+                      <>
+                        <div className={styles.passageInstructionText}>
+                          {currentProblem.passageHeader || "Study the provided information and answer the following questions:"}
+                        </div>
+                        <div className={styles.questionPassageBox}>
+                          {currentProblem.snippet}
+                        </div>
+                        <div className={styles.questionPromptTitle}>
+                          {currentProblem.title}
+                        </div>
+                      </>
+                    ) : (
+                      currentProblem.title
                     )}
                   </div>
                 </div>
@@ -484,10 +499,10 @@ export default function TestPage() {
               >
                 {/* Watermark */}
                 <div className={styles.watermarkContainer}>
-                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                  {[1, 2, 3, 4].map((i) => (
                     <div key={i} className={styles.watermarkItem}>
                       <div>mde2025011@iiita.ac.in</div>
-                      <div>2026-09-19 14:09 • UTC</div>
+                      <div>2026-09-20 12:13 • UTC</div>
                     </div>
                   ))}
                 </div>
@@ -520,15 +535,13 @@ export default function TestPage() {
                 </div>
 
                 {/* Reset Answer Button */}
-                {answers[currentProblem.id] !== undefined && (
-                  <button className={styles.resetAnswerBtn} onClick={handleResetAnswer}>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M23 4v6h-6M1 20v-6h6"/>
-                      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-                    </svg>
-                    <span>Reset Answer</span>
-                  </button>
-                )}
+                <button className={styles.resetAnswerBtn} onClick={handleResetAnswer}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M23 4v6h-6M1 20v-6h6"/>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                  </svg>
+                  <span>Reset Answer</span>
+                </button>
               </div>
             </div>
           </div>

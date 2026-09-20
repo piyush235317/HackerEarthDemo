@@ -2,71 +2,76 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--gradient-bg);
+  background: #121214;
   overflow-y: auto;
 }
 
 .content {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 60px 40px 40px;
+  padding: 30px 20px;
 }
 
 .card {
-  max-width: 800px;
+  max-width: 780px;
   width: 100%;
+  background: #19191c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: none;
 }
 
 /* ===== Header ===== */
 .headerSection {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .iconWrapper {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: #2563eb;
+  background: #192642;
+  border: 1px solid rgba(59, 130, 246, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  box-shadow: none;
 }
 
 .iconSvg {
-  width: 25.3px;
-  height: 25.3px;
-  fill: #ffffff;
+  width: 20px;
+  height: 20px;
 }
 
 .title {
-  font-size: 25.4px;
+  font-size: 22px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 6px;
+  letter-spacing: -0.2px;
 }
 
 .subtitle {
-  font-size: 15.8px;
-  color: #94a3b8;
+  font-size: 14px;
+  color: #8f9bb0;
 }
 
 /* ===== Instruction Boundary Box ===== */
 .boundaryBox {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: #18181b;
-  padding: 22px 24px 18px;
-  margin-bottom: 18px;
-  max-height: 420px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  margin-bottom: 20px;
+  max-height: 440px;
   overflow-y: auto;
+  padding-right: 8px;
   scrollbar-width: thin;
-  scrollbar-color: #64748b transparent;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 
 .boundaryBox::-webkit-scrollbar {
@@ -78,20 +83,16 @@
 }
 
 .boundaryBox::-webkit-scrollbar-thumb {
-  background: #64748b;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 2px;
-}
-
-.boundaryBox::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
 
 /* ===== Section Labels ===== */
 .sectionLabel {
-  font-size: 12.4px;
+  font-size: 11.5px;
   font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 1.8px;
+  color: #5d6b82;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -100,60 +101,63 @@
 .guidelinesGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px 40px;
-  margin-bottom: 28px;
+  gap: 10px 24px;
+  margin-bottom: 24px;
 }
 
 .guidelineItem {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 15.8px;
-  color: var(--text-secondary);
-  line-height: 1.55;
+  gap: 8px;
+  font-size: 13.8px;
+  color: #d1d5db;
+  line-height: 1.45;
 }
 
 .guidelineBullet {
-  color: var(--accent-cyan);
+  color: #3b82f6;
   flex-shrink: 0;
-  margin-top: 5px;
-  font-size: 6.8px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.boldText {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 /* ===== Monitoring Policies ===== */
 .policiesGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 18px 24px;
   margin-bottom: 20px;
 }
 
 .policyCard {
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  padding: 0;
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
 .policyIcon {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  background: rgba(30, 90, 180, 0.12);
-  border: 1px solid rgba(50, 120, 220, 0.15);
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding-top: 2px;
 }
 
 .policyIconSvg {
-  width: 17.2px;
-  height: 17.2px;
-  fill: #4da6ff;
+  width: 18px;
+  height: 18px;
 }
 
 .policyContent {
@@ -162,35 +166,34 @@
 }
 
 .policyTitle {
-  font-size: 14.7px;
+  font-size: 14px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 3px;
 }
 
 .policyDesc {
-  font-size: 13.6px;
-  color: var(--text-muted);
-  line-height: 1.5;
+  font-size: 13px;
+  color: #8f9bb0;
+  line-height: 1.45;
 }
 
 /* ===== Privacy Note ===== */
 .privacyNote {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
-  padding: 10px 0;
-  margin-bottom: 16px;
-  font-size: 13.6px;
-  color: var(--text-muted);
+  padding-top: 6px;
+  font-size: 13px;
+  color: #8f9bb0;
   line-height: 1.4;
 }
 
 .shieldIconSvg {
-  width: 18.4px;
-  height: 18.4px;
-  fill: var(--accent-green);
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 /* ===== Agreement Row ===== */
@@ -204,52 +207,53 @@
 
 .checkboxLabel {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   cursor: pointer;
-  font-size: 14.7px;
-  color: var(--text-secondary);
-  line-height: 1.5;
+  font-size: 13.8px;
+  color: #cbd5e1;
+  line-height: 1.45;
   flex: 1;
 }
 
 .checkbox {
-  width: 17.2px;
-  height: 17.2px;
-  accent-color: var(--accent-cyan);
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
   flex-shrink: 0;
-  margin-top: 1px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .acceptBtn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 9px 20px;
-  border-radius: 6px;
-  background: #385192;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #3b82f6;
   color: #ffffff;
-  font-size: 15.3px;
-  font-weight: 500;
+  font-size: 14.5px;
+  font-weight: 600;
   cursor: pointer;
   border: none;
   white-space: nowrap;
-  transition: all var(--transition-normal);
+  box-shadow: none;
+  transition: all 150ms ease;
   flex-shrink: 0;
 }
 
 .acceptBtn:hover:not(:disabled) {
-  background: #4562ab;
+  background: #2563eb;
 }
 
 .acceptBtn:disabled {
-  opacity: 0.35;
+  opacity: 0.4;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .checkIconSvg {
-  width: 15px;
-  height: 15px;
-  fill: #ffffff;
+  width: 16px;
+  height: 16px;
 }

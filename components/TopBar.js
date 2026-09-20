@@ -3,7 +3,7 @@
 import HackerEarthLogo from '@/components/HackerEarthLogo';
 import styles from './TopBar.module.css';
 
-export default function TopBar({ logoText = 'H', testName = 'Practice test' }) {
+export default function TopBar({ logoText = 'H', testName = 'EXL Digital Campus Test' }) {
   return (
     <header className={styles.topBar}>
       <div className={styles.leftSection}>
