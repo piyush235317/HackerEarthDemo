@@ -1,0 +1,178 @@
+.pageTitle {
+  font-size: 26.6px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Countdown Banner */
+.countdownBanner {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.clockIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.clockSvg {
+  width: 19.5px;
+  height: 19.5px;
+  fill: #cbd5e1;
+}
+
+.countdownContent {
+  flex: 1;
+}
+
+.countdownTitle {
+  font-size: 16.4px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.countdownText {
+  font-size: 15.3px;
+  color: #94a3b8;
+}
+
+/* Sections */
+.sectionTitle {
+  font-size: 18.1px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.aboutText {
+  font-size: 15.8px;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.instructionsTitle {
+  font-size: 18.1px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.instructionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.instructionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15.8px;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.bullet {
+  color: #64748b;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 12.4px;
+}
+
+/* Question Count Textarea */
+.questionInputContainer {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.questionInputLabel {
+  font-size: 15.8px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.questionTextarea {
+  width: 140px;
+  height: 36px;
+  min-height: 36px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15.8px;
+  font-family: inherit;
+  resize: none;
+  line-height: 20.7px;
+  box-sizing: border-box;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.questionTextarea:focus {
+  outline: none;
+  border-color: #385192;
+  box-shadow: 0 0 0 2px rgba(56, 81, 146, 0.35);
+}
+
+.questionTextarea::placeholder {
+  color: #64748b;
+  font-size: 14.7px;
+}
+
+.questionInputHint {
+  font-size: 14.1px;
+  color: #94a3b8;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 15.8px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 150ms ease;
+}
+
+.backBtn:hover {
+  color: #ffffff;
+}
+
+.startBtn {
+  padding: 8px 24px;
+  border-radius: 6px;
+  background: #385192;
+  color: #ffffff;
+  font-size: 15.8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 150ms ease;
+}
+
+.startBtn:hover {
+  background: #4562ab;
+}

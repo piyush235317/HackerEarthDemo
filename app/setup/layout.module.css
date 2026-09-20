@@ -1,0 +1,176 @@
+.setupLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #18181b;
+  color: #ffffff;
+}
+
+/* ===== Top Bar ===== */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(24, 24, 27, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 56px;
+  backdrop-filter: blur(8px);
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 15.8px;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.testName {
+  font-size: 15.8px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.themeBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  transition: color 150ms ease;
+}
+
+.themeBtn:hover {
+  color: #94a3b8;
+}
+
+.sunIcon {
+  width: 18.4px;
+  height: 18.4px;
+}
+
+/* ===== Body: Centered Layout ===== */
+.body {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding-top: 56px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 980px;
+  padding: 60px 24px 60px 24px;
+  min-height: calc(100vh - 48px);
+}
+
+/* ===== Sidebar Stepper ===== */
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  padding-right: 36px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sidebarTitle {
+  font-size: 19.2px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 150ms ease;
+}
+
+.stepItemActive {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stepIndicator {
+  width: 25.3px;
+  height: 25.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activeCircle {
+  width: 25.3px;
+  height: 25.3px;
+  border-radius: 50%;
+  background: #385192;
+  color: #ffffff;
+  font-size: 14.1px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completedCheck {
+  color: #94a3b8;
+  font-size: 15.8px;
+  font-weight: 600;
+}
+
+.inactiveNum {
+  color: #555e70;
+  font-size: 15.3px;
+  font-weight: 500;
+}
+
+.stepLabel {
+  font-size: 15.8px;
+  line-height: 1.35;
+}
+
+.stepLabelActive {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.stepLabelCompleted {
+  color: #94a3b8;
+}
+
+.stepLabelInactive {
+  color: #555e70;
+}
+
+/* ===== Content Area ===== */
+.content {
+  flex: 1;
+  padding-left: 48px;
+  max-width: 660px;
+}

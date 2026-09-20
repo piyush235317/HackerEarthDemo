@@ -1,0 +1,71 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(10, 12, 22, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 56px;
+  backdrop-filter: blur(8px);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 25.3px;
+  height: 25.3px;
+  border-radius: 5px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14.7px;
+  color: #ffffff;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  user-select: none;
+}
+
+.testName {
+  font-size: 15.8px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.themeBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  transition: color 150ms ease;
+}
+
+.themeBtn:hover {
+  color: #94a3b8;
+}
+
+.sunIcon {
+  width: 18.4px;
+  height: 18.4px;
+}

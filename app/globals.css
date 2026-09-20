@@ -1,0 +1,123 @@
+/* ===== CSS Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Background colors - matching user image dark theme */
+  --bg-primary: #18181b;
+  --bg-secondary: #141417;
+  --bg-surface: rgba(255, 255, 255, 0.04);
+  --bg-surface-hover: rgba(255, 255, 255, 0.08);
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-border: rgba(255, 255, 255, 0.08);
+  --bg-topbar: rgba(24, 24, 27, 0.85);
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b8;
+  --text-muted: #6b7280;
+  --text-link: #38bdf8;
+
+  /* Accent & Button colors from user image */
+  --btn-primary: #385192;
+  --btn-primary-hover: #4562ab;
+  --accent-cyan: #38bdf8;
+  --accent-cyan-dark: #0284c7;
+  --accent-blue: #385192;
+  --accent-blue-dark: #2d4177;
+  --accent-green: #22c55e;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+
+  /* Gradients */
+  --gradient-cyan: linear-gradient(135deg, #385192 0%, #4562ab 100%);
+  --gradient-bg: #18181b;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+
+  /* Sidebar */
+  --sidebar-width: 280px;
+
+  /* Typography */
+  --font-family: var(--font-geist-sans), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: var(--font-geist-mono), 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+html {
+  font-size: 17px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  font-size: 17px;
+  line-height: 1.55;
+  background: #18181b;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* ===== Global SVG icon scale-up ===== */
+svg {
+  flex-shrink: 0;
+}
+
+/* Scale all small inline icons by ~13% via a CSS custom property trick */
+:root {
+  --icon-scale: 1.13;
+}
+
+/* Scrollbar - matching HackerEarth thin blue scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan-dark);
+}

@@ -1,0 +1,82 @@
+.pageTitle {
+  font-size: 26.6px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.introText {
+  font-size: 16.4px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.termsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.termItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15.8px;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.bullet {
+  color: #64748b;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 12.4px;
+}
+
+.companyBold {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.declineBtn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 7px 20px;
+  border-radius: 6px;
+  font-size: 15.8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.declineBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.acceptBtn {
+  padding: 8px 22px;
+  border-radius: 6px;
+  background: #385192;
+  color: #ffffff;
+  font-size: 15.8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 150ms ease;
+}
+
+.acceptBtn:hover {
+  background: #4562ab;
+}

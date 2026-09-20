@@ -1,0 +1,255 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-bg);
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 40px 40px;
+}
+
+.card {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* ===== Header ===== */
+.headerSection {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #2563eb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.iconSvg {
+  width: 25.3px;
+  height: 25.3px;
+  fill: #ffffff;
+}
+
+.title {
+  font-size: 25.4px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 15.8px;
+  color: #94a3b8;
+}
+
+/* ===== Instruction Boundary Box ===== */
+.boundaryBox {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #18181b;
+  padding: 22px 24px 18px;
+  margin-bottom: 18px;
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #64748b transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.boundaryBox::-webkit-scrollbar {
+  width: 4px;
+}
+
+.boundaryBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.boundaryBox::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 2px;
+}
+
+.boundaryBox::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===== Section Labels ===== */
+.sectionLabel {
+  font-size: 12.4px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ===== Important Guidelines ===== */
+.guidelinesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 40px;
+  margin-bottom: 28px;
+}
+
+.guidelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15.8px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.guidelineBullet {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 5px;
+  font-size: 6.8px;
+}
+
+/* ===== Monitoring Policies ===== */
+.policiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.policyCard {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.policyIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: rgba(30, 90, 180, 0.12);
+  border: 1px solid rgba(50, 120, 220, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.policyIconSvg {
+  width: 17.2px;
+  height: 17.2px;
+  fill: #4da6ff;
+}
+
+.policyContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.policyTitle {
+  font-size: 14.7px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.policyDesc {
+  font-size: 13.6px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== Privacy Note ===== */
+.privacyNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  margin-bottom: 16px;
+  font-size: 13.6px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.shieldIconSvg {
+  width: 18.4px;
+  height: 18.4px;
+  fill: var(--accent-green);
+  flex-shrink: 0;
+}
+
+/* ===== Agreement Row ===== */
+.agreementRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 4px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14.7px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.checkbox {
+  width: 17.2px;
+  height: 17.2px;
+  accent-color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.acceptBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-radius: 6px;
+  background: #385192;
+  color: #ffffff;
+  font-size: 15.3px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.acceptBtn:hover:not(:disabled) {
+  background: #4562ab;
+}
+
+.acceptBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.checkIconSvg {
+  width: 15px;
+  height: 15px;
+  fill: #ffffff;
+}

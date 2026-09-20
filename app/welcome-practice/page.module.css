@@ -1,0 +1,115 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 68px 24px 40px;
+}
+
+.card {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 28.8px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.infoTable {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.infoRow:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.infoLabel {
+  width: 120px;
+  text-align: left;
+  font-size: 17px;
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.infoValue {
+  flex: 1;
+  text-align: left;
+  font-size: 17px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.helpCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.helpTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.helpContact {
+  font-size: 15.8px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.helpEmail {
+  font-size: 15.8px;
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+.helpEmail:hover {
+  text-decoration: underline;
+}
+
+.setupBtn {
+  width: 100%;
+  padding: 12px 28px;
+  border-radius: 6px;
+  background: #385192;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-normal);
+}
+
+.setupBtn:hover {
+  background: #4562ab;
+}

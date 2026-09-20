@@ -1,0 +1,156 @@
+.container {
+  min-height: 100vh;
+  background-color: #18181b;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.content {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logoWrapper {
+  margin-bottom: 18px;
+}
+
+.logoBadge {
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22.6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  font-size: 23.2px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 15.3px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.clockSpan {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.clockIcon {
+  width: 15px;
+  height: 15px;
+  fill: #94a3b8;
+}
+
+/* Card Section */
+.card {
+  width: 100%;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 20px 24px 22px;
+  margin-bottom: 18px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+  font-size: 17.5px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  font-size: 14.7px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.link {
+  color: #38bdf8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #7dd3fc;
+}
+
+/* Primary Button with exact color #385192 */
+.primaryBtn {
+  width: 100%;
+  background: #385192;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 16.4px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 150ms ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.primaryBtn:hover {
+  background: #4562ab;
+}
+
+.windowsIcon {
+  width: 16.1px;
+  height: 16.1px;
+}
+
+.osNote {
+  font-size: 14.1px;
+  color: #94a3b8;
+  text-align: left;
+  margin-top: 14px;
+}
+
+/* Footer info */
+.footer {
+  font-size: 14.7px;
+  color: #64748b;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.emailLink {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.emailLink:hover {
+  color: #7dd3fc;
+}
