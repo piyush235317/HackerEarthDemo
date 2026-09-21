@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import ExitApplicationModal from './ExitApplicationModal';
 import styles from './RightSideDrawer.module.css';
 
 export default function RightSideDrawer() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [showExitNotice, setShowExitNotice] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
 
   useEffect(() => {
     const handleOpen = () => {
@@ -24,24 +25,25 @@ export default function RightSideDrawer() {
   };
 
   const handleExitClick = () => {
+    setIsOpen(false);
+    setShowExitModal(true);
+  };
+
+  const handleConfirmExit = () => {
+    setShowExitModal(false);
     try {
       if (document.fullscreenElement && document.exitFullscreen) {
         document.exitFullscreen().catch(() => {});
       }
     } catch (e) {}
 
-    // Attempt to close the browser window / tab
     window.close();
-
     try {
       window.open('', '_self', '');
       window.close();
     } catch (e) {}
 
-    // In case browser prevents automatic tab closure, inform user
-    setTimeout(() => {
-      setShowExitNotice(true);
-    }, 250);
+    router.push('/test-instruction');
   };
 
   return (
@@ -145,33 +147,12 @@ export default function RightSideDrawer() {
         </div>
       )}
 
-      {/* Exit Notice Modal if browser blocks window.close */}
-      {showExitNotice && (
-        <div className={styles.modalOverlay} onClick={() => setShowExitNotice(false)}>
-          <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
-            <h3 className={styles.modalTitle}>Session Exited</h3>
-            <p className={styles.modalDesc}>
-              You have successfully exited the session. Please close this browser tab or window.
-            </p>
-            <div className={styles.modalActions}>
-              <button
-                type="button"
-                className={styles.confirmExitBtn}
-                onClick={() => {
-                  window.close();
-                  try {
-                    window.open('', '_self', '');
-                    window.close();
-                  } catch (e) {}
-                  router.push('/test-instruction');
-                }}
-              >
-                Close Tab
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Authentic SmartBrowser Exit Application Modal */}
+      <ExitApplicationModal
+        isOpen={showExitModal}
+        onClose={() => setShowExitModal(false)}
+        onConfirm={handleConfirmExit}
+      />
     </>
   );
 }

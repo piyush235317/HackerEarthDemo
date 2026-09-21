@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import HackerEarthLogo from '@/components/HackerEarthLogo';
+import DiamondIcon from '@/components/DiamondIcon';
+import ExitApplicationModal from '@/components/ExitApplicationModal';
 import { problemsData } from '@/data/problemsData';
 import { getState } from '@/lib/store';
 import styles from './page.module.css';
@@ -165,22 +167,24 @@ export default function TestPage() {
       {/* Top Bar */}
       <header className={styles.topBar}>
         <div className={styles.topBarLeft}>
-          <HackerEarthLogo size={32} />
+          <div className={styles.topBarLogoArea}>
+            <HackerEarthLogo size={32} />
+            <div className={styles.topBarDivider} />
+          </div>
 
           <div className={styles.metrics}>
             <div className={styles.metricItem}>
-              {/* Clock / Solved Count */}
-              <svg className={styles.clockIcon} viewBox="0 0 24 24">
-                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+              {/* Checkmark Circle / Solved Count */}
+              <svg className={`${styles.checkCircleIcon} ${solvedCount > 0 ? styles.checkCircleIconSolved : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="9 12 11 14 15 10" />
               </svg>
               <span>{solvedCount}/{activeProblems.length}</span>
             </div>
 
             <div className={styles.metricItem}>
               {/* Diamond total score */}
-              <svg className={styles.diamondIcon} viewBox="0 0 512 512">
-                <path d="M168.5 72L256 165l87.5-93-175 0zM383.9 99.1L311.5 176l129 0L383.9 99.1zm50 124.9L256 224 78.1 224 256 420.3 433.9 224zM71.5 176l129 0L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
-              </svg>
+              <DiamondIcon size={16} className={styles.diamondIcon} />
               <span>{parseInt(totalScore, 10)}</span>
             </div>
 
@@ -244,7 +248,7 @@ export default function TestPage() {
         {viewMode === 'list' ? (
           <button className={styles.endTestBtn} onClick={() => setShowEndTestModal(true)}>
             <svg className={styles.exitIcon} viewBox="0 0 24 24">
-              <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+              <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
             </svg>
             <span>End test</span>
           </button>
@@ -265,7 +269,7 @@ export default function TestPage() {
             <div className={styles.totalScoreInfo}>
               <span>Total score: {totalScore}</span>
               <svg className={styles.infoIcon} viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
               </svg>
             </div>
           </div>
@@ -290,9 +294,7 @@ export default function TestPage() {
                       <div className={styles.tagsRow}>
                         <span className={styles.mcqBadge}>{problem.type}</span>
                         <div className={styles.scoreBadge}>
-                          <svg className={styles.cardDiamond} viewBox="0 0 512 512">
-                            <path d="M168.5 72L256 165l87.5-93-175 0zM383.9 99.1L311.5 176l129 0L383.9 99.1zm50 124.9L256 224 78.1 224 256 420.3 433.9 224zM71.5 176l129 0L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
-                          </svg>
+                          <DiamondIcon size={15} className={styles.cardDiamond} />
                           <span>{problem.score}</span>
                         </div>
                       </div>
@@ -321,17 +323,21 @@ export default function TestPage() {
           {/* Left Navigation Rail */}
           <aside className={styles.sideRail}>
             <div className={styles.sideRailTop}>
-              {/* Back to problems list button */}
-              <button
-                className={styles.problemsListIconBtn}
-                onClick={() => setViewMode('list')}
-                title="Back to Problems List"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <line x1="9" y1="3" x2="9" y2="21" />
-                </svg>
-              </button>
+              {/* Back to problems list button in aligned header */}
+              <div className={styles.sideRailHeader}>
+                <button
+                  className={styles.problemsListIconBtn}
+                  onClick={() => setViewMode('list')}
+                  title="Back to Problems List"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <line x1="9" y1="3" x2="9" y2="21" />
+                    <polyline points="13 9 16 12 13 15" />
+                  </svg>
+                </button>
+                <div className={styles.sideRailDivider} />
+              </div>
 
               {/* Questions vertical list */}
               <div className={styles.sideQuestionList} ref={sideQuestionListRef}>
@@ -343,9 +349,8 @@ export default function TestPage() {
                     <div
                       key={p.id}
                       ref={isActive ? activeQuestionRef : null}
-                      className={`${styles.sideQuestionNum} ${
-                        isActive ? styles.sideQuestionNumActive : ''
-                      } ${isSolved ? styles.sideQuestionNumSolved : ''}`}
+                      className={`${styles.sideQuestionNum} ${isActive ? styles.sideQuestionNumActive : ''
+                        } ${isSolved ? styles.sideQuestionNumSolved : ''}`}
                       onClick={() => setCurrentQuestionIndex(idx)}
                       title={`Question ${p.id}`}
                     >
@@ -378,7 +383,7 @@ export default function TestPage() {
                 onClick={() => setShowEndTestModal(true)}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                  <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
                 </svg>
               </button>
             </div>
@@ -410,17 +415,15 @@ export default function TestPage() {
                     <div className={styles.questionHeaderRight}>
                       {/* Score badge cell */}
                       <div className={styles.scorePanelCell}>
-                        <svg className={styles.cardDiamond} viewBox="0 0 512 512">
-                          <path d="M168.5 72L256 165l87.5-93-175 0zM383.9 99.1L311.5 176l129 0L383.9 99.1zm50 124.9L256 224 78.1 224 256 420.3 433.9 224zM71.5 176l129 0L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
-                        </svg>
+                        <DiamondIcon size={14} className={styles.cardDiamond} />
                         <span>{currentProblem.score}</span>
                       </div>
                       {/* Vertical divider */}
                       <div className={styles.questionHeaderDivider} />
-                      {/* Bug / Settings icon cell */}
-                      <div className={styles.bugIconCell}>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 8h-1.81c-.45-.78-1.07-1.45-1.82-1.96l.93-.93a.996.996 0 1 0-1.41-1.41l-1.47 1.47C12.78 5.06 12.06 5 11.3 5c-.76 0-1.48.06-2.12.17L7.71 3.7a.996.996 0 1 0-1.41 1.41l.93.93c-.75.51-1.37 1.18-1.82 1.96H3.5a1 1 0 1 0 0 2h1.61c-.07.32-.11.66-.11 1v1H3.5a1 1 0 1 0 0 2H5v1c0 .34.04.68.11 1H3.5a1 1 0 1 0 0 2h1.91c.62 1.09 1.55 1.97 2.68 2.5l-.8 1.6a1 1 0 1 0 1.79.89l1-2c.69.13 1.4.21 2.12.21.72 0 1.43-.08 2.12-.21l1 2a1 1 0 1 0 1.79-.89l-.8-1.6c1.13-.53 2.06-1.41 2.68-2.5h1.91a1 1 0 1 0 0-2h-1.61c.07-.32.11-.66.11-1v-1h1.5a1 1 0 1 0 0-2h-1.5v-1c0-.34-.04-.68-.11-1h1.61a1 1 0 1 0 0-2zM12 17c-2.76 0-5-2.24-5-5v-2h10v2c0 2.76-2.24 5-5 5z"/>
+                      {/* Bug / Report icon cell */}
+                      <div className={styles.bugIconCell} title="Report an issue">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z" />
                         </svg>
                       </div>
                     </div>
@@ -452,7 +455,10 @@ export default function TestPage() {
                     disabled={currentQuestionIndex === 0}
                     onClick={() => setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))}
                   >
-                    &lt; Previous
+                    <svg width="8" height="12" viewBox="0 0 8 13" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className={styles.navBtnIcon}>
+                      <path d="M6 2L2 6.5L6 11" />
+                    </svg>
+                    <span>Previous</span>
                   </button>
 
                   <span className={styles.questionIndexIndicator}>
@@ -464,7 +470,10 @@ export default function TestPage() {
                     disabled={currentQuestionIndex >= activeProblems.length - 1}
                     onClick={() => setCurrentQuestionIndex((prev) => Math.min(activeProblems.length - 1, prev + 1))}
                   >
-                    Next &gt;
+                    <span>Next</span>
+                    <svg width="8" height="12" viewBox="0 0 8 13" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className={styles.navBtnIcon}>
+                      <path d="M2 2L6 6.5L2 11" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -511,62 +520,51 @@ export default function TestPage() {
                   Select your answer to the problem below
                 </div>
 
-                <div className={styles.optionsStack}>
-                  {currentProblem.options.map((opt, idx) => {
-                    const isSelected = answers[currentProblem.id] === idx;
+                <div className={styles.optionsSection}>
+                  <div className={styles.optionsStack}>
+                    {currentProblem.options.map((opt, idx) => {
+                      const isSelected = answers[currentProblem.id] === idx;
 
-                    return (
-                      <div
-                        key={idx}
-                        className={`${styles.optionCard} ${
-                          isSelected ? styles.optionCardSelected : ''
-                        }`}
-                        onClick={() => handleSelectOption(idx)}
-                      >
+                      return (
                         <div
-                          className={`${styles.radioCircle} ${
-                            isSelected ? styles.radioCircleSelected : ''
-                          }`}
-                        />
-                        <span className={styles.optionLabel}>{opt}</span>
-                      </div>
-                    );
-                  })}
-                </div>
+                          key={idx}
+                          className={`${styles.optionCard} ${isSelected ? styles.optionCardSelected : ''
+                            }`}
+                          onClick={() => handleSelectOption(idx)}
+                        >
+                          <div
+                            className={`${styles.radioCircle} ${isSelected ? styles.radioCircleSelected : ''
+                              }`}
+                          />
+                          <span className={styles.optionLabel}>{opt}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
 
-                {/* Reset Answer Button */}
-                <button className={styles.resetAnswerBtn} onClick={handleResetAnswer}>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M23 4v6h-6M1 20v-6h6"/>
-                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-                  </svg>
-                  <span>Reset Answer</span>
-                </button>
+                  {/* Reset Answer Button positioned directly below the options */}
+                  <div className={styles.resetAnswerRow}>
+                    <button className={styles.resetAnswerBtn} onClick={handleResetAnswer}>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M23 4v6h-6M1 20v-6h6" />
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                      </svg>
+                      <span>Reset Answer</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* End Test Modal */}
-      {showEndTestModal && (
-        <div className={styles.modalOverlay} onClick={() => setShowEndTestModal(false)}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h3 className={styles.modalTitle}>End Test Confirmation</h3>
-            <p className={styles.modalQuestion}>
-              Are you sure you want to end the test? You have answered {solvedCount} out of {activeProblems.length} problems.
-            </p>
-            <div className={styles.modalFooter}>
-              <button className={styles.cancelBtn} onClick={() => setShowEndTestModal(false)}>
-                Cancel
-              </button>
-              <button className={styles.endTestBtn} onClick={handleEndTest}>
-                Confirm & End Test
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Authentic SmartBrowser Exit Application Modal with 10s Timer */}
+      <ExitApplicationModal
+        isOpen={showEndTestModal}
+        onClose={() => setShowEndTestModal(false)}
+        onConfirm={handleEndTest}
+      />
     </div>
   );
 }

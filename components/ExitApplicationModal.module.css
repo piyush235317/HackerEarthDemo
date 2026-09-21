@@ -1,0 +1,237 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(180deg, #441a12 0%, #290f0a 100%);
+  border: 1px solid rgba(220, 60, 40, 0.35);
+  border-radius: 16px;
+  padding: 28px 24px 24px 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 50px rgba(220, 38, 38, 0.35);
+  color: #ffffff;
+  position: relative;
+  box-sizing: border-box;
+  animation: modalPop 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.sessionControlHeader {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fca5a5;
+  opacity: 0.9;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.iconCircleBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #c2410c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 2px 10px rgba(194, 65, 12, 0.4);
+}
+
+.exitIconSvg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.modalTitle {
+  font-size: 21px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fecaca;
+  opacity: 0.92;
+  text-align: center;
+  line-height: 1.45;
+  margin: 0 auto 18px auto;
+  max-width: 380px;
+}
+
+.timerRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+  padding: 0 2px;
+}
+
+.countdownBox {
+  width: 74px;
+  height: 58px;
+  background: rgba(15, 6, 5, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.countdownDigit {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fed7aa;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.timerInfoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timerInfoTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.timerInfoDesc {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fca5a5;
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+.infoCard {
+  background: rgba(15, 6, 5, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 13px 16px;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.auditNoticeCard {
+  background: rgba(20, 8, 6, 0.55);
+  border: 1.5px solid #ea580c;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 16px rgba(234, 88, 12, 0.5), inset 0 0 8px rgba(234, 88, 12, 0.25);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.auditIconArea {
+  color: #fdba74;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.warningTriangleIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.auditContentCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.auditTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fdba74;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.auditDesc {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+}
+
+.cancelBtn {
+  flex: 1;
+  height: 44px;
+  background: rgba(18, 8, 7, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.cancelBtn:hover {
+  background: rgba(30, 14, 12, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.exitApplicationBtn {
+  flex: 1;
+  height: 44px;
+  background: linear-gradient(180deg, #d94827 0%, #b91c1c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.4);
+  transition: all 150ms ease;
+}
+
+.exitApplicationBtn:hover {
+  background: linear-gradient(180deg, #ea580c 0%, #c2410c 100%);
+  box-shadow: 0 4px 18px rgba(234, 88, 12, 0.55);
+}
