@@ -82,7 +82,7 @@ export default function TestPage() {
       el.webkitRequestFullscreen ||
       el.mozRequestFullScreen ||
       el.msRequestFullscreen;
-    if (req) req.call(el).catch(() => {});
+    if (req) req.call(el).catch(() => { });
     setIsFullscreenWarning(false);
   };
 
@@ -478,7 +478,7 @@ export default function TestPage() {
                     <div className={styles.watermarkContainer}>
                       {[1, 2, 3, 4].map((i) => (
                         <div key={i} className={styles.watermarkItem}>
-                          <div>anandbhansinghchouhan@gmail.com</div>
+                          <div>mse2025011@iiita.ac.in</div>
                           <div>2026-09-21 19:11 • UTC</div>
                         </div>
                       ))}
@@ -588,7 +588,7 @@ export default function TestPage() {
                   <div className={styles.watermarkContainer}>
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className={styles.watermarkItem}>
-                        <div>anandbhansinghchouhan@gmail.com</div>
+                        <div>mse2025011@iiita.ac.in</div>
                         <div>2026-09-21 19:11 • UTC</div>
                       </div>
                     ))}
