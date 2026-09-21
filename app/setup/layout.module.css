@@ -26,42 +26,50 @@
 .topBarLeft {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+}
+
+.topBarDivider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.22);
+  margin: 0 4px;
 }
 
 .logo {
-  font-size: 15.8px;
+  font-size: 15px;
   font-weight: 700;
   color: #cbd5e1;
 }
 
 .testName {
-  font-size: 15.8px;
-  color: #94a3b8;
-  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 500;
 }
 
-.themeBtn {
-  width: 28px;
-  height: 28px;
+.settingsBtn {
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #94a3b8;
   cursor: pointer;
   background: none;
   border: none;
   border-radius: 50%;
-  transition: color 150ms ease;
+  transition: all 150ms ease;
 }
 
-.themeBtn:hover {
-  color: #94a3b8;
+.settingsBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.sunIcon {
-  width: 18.4px;
-  height: 18.4px;
+.gearIcon {
+  width: 19px;
+  height: 19px;
 }
 
 /* ===== Body: Centered Layout ===== */
@@ -77,48 +85,48 @@
 .container {
   display: flex;
   width: 100%;
-  max-width: 980px;
-  padding: 60px 24px 60px 24px;
-  min-height: calc(100vh - 48px);
+  max-width: 1040px;
+  padding: 52px 32px 48px 24px;
+  min-height: calc(100vh - 56px);
 }
 
 /* ===== Sidebar Stepper ===== */
 .sidebar {
-  width: 240px;
-  min-width: 240px;
+  width: 250px;
+  min-width: 250px;
   padding-right: 36px;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .sidebarTitle {
-  font-size: 19.2px;
+  font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .stepList {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .stepItem {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 8px 14px;
+  border-radius: 24px;
   transition: background 150ms ease;
 }
 
 .stepItemActive {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .stepIndicator {
-  width: 25.3px;
-  height: 25.3px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,32 +134,58 @@
 }
 
 .activeCircle {
-  width: 25.3px;
-  height: 25.3px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: #385192;
+  background: #2563eb;
   color: #ffffff;
-  font-size: 14.1px;
+  font-size: 13px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.completedCheck {
-  color: #94a3b8;
-  font-size: 15.8px;
-  font-weight: 600;
+.activeCheckCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.inactiveNum {
-  color: #555e70;
-  font-size: 15.3px;
+.completedCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inactiveCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 13px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stepLabel {
-  font-size: 15.8px;
+  font-size: 14.5px;
   line-height: 1.35;
 }
 
@@ -165,12 +199,12 @@
 }
 
 .stepLabelInactive {
-  color: #555e70;
+  color: #64748b;
 }
 
 /* ===== Content Area ===== */
 .content {
   flex: 1;
   padding-left: 48px;
-  max-width: 660px;
+  max-width: 680px;
 }

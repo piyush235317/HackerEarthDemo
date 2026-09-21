@@ -1,15 +1,45 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .pageTitle {
-  font-size: 26.6px;
+  font-size: 24px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-/* Countdown Banner */
+.scrollableContent {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  padding-right: 14px;
+  margin-bottom: 20px;
+}
+
+.scrollableContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollableContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollableContent::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.scrollableContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Amber Warning Countdown Banner matching reference Image 5 */
 .countdownBanner {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.04);
+  border: 1px solid rgba(245, 158, 11, 0.65);
+  border-radius: 8px;
   padding: 14px 18px;
   margin-bottom: 24px;
   display: flex;
@@ -25,7 +55,7 @@
 .clockSvg {
   width: 19.5px;
   height: 19.5px;
-  fill: #cbd5e1;
+  fill: #f59e0b;
 }
 
 .countdownContent {
@@ -33,34 +63,35 @@
 }
 
 .countdownTitle {
-  font-size: 16.4px;
+  font-size: 14.5px;
   font-weight: 600;
-  color: #ffffff;
+  color: #fbbf24;
   margin-bottom: 4px;
 }
 
 .countdownText {
-  font-size: 15.3px;
-  color: #94a3b8;
+  font-size: 13.5px;
+  color: #fde68a;
+  line-height: 1.4;
 }
 
 /* Sections */
 .sectionTitle {
-  font-size: 18.1px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 8px;
 }
 
 .aboutText {
-  font-size: 15.8px;
+  font-size: 14px;
   color: #cbd5e1;
-  line-height: 1.55;
+  line-height: 1.5;
   margin-bottom: 24px;
 }
 
 .instructionsTitle {
-  font-size: 18.1px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 12px;
@@ -69,149 +100,24 @@
 .instructionsList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
 .instructionItem {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-size: 15.8px;
+  gap: 10px;
+  font-size: 14px;
   color: #cbd5e1;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .bullet {
   color: #64748b;
   flex-shrink: 0;
-  margin-top: 1px;
-  font-size: 12.4px;
-}
-
-/* Question Count Textarea & Watermark Toggle */
-.questionInputContainer {
-  margin-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.inputAndToggleRow {
-  display: flex;
-  align-items: flex-start;
-  gap: 36px;
-  flex-wrap: wrap;
-}
-
-.questionInputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.watermarkToggleGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.watermarkGroupTitle {
-  font-size: 15.8px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.watermarkCheckboxLabel {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  cursor: pointer;
-  user-select: none;
-  height: 36px;
-}
-
-.watermarkCheckbox {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-.watermarkCustomBox {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 150ms ease;
-  flex-shrink: 0;
-}
-
-.watermarkCheckbox:checked + .watermarkCustomBox {
-  background: #3b82f6;
-  border-color: #3b82f6;
-}
-
-.watermarkCheckboxLabel:hover .watermarkCustomBox {
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
-.watermarkLabelText {
-  font-size: 15px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.watermarkToggleHint {
-  font-size: 13.5px;
-  color: #94a3b8;
-}
-
-.questionInputLabel {
-  font-size: 15.8px;
-  font-weight: 600;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.questionTextarea {
-  width: 140px;
-  height: 36px;
-  min-height: 36px;
-  padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 5px;
-  color: #ffffff;
-  font-size: 15.8px;
-  font-family: inherit;
-  resize: none;
-  line-height: 20.7px;
-  box-sizing: border-box;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
-}
-
-.questionTextarea:focus {
-  outline: none;
-  border-color: #385192;
-  box-shadow: 0 0 0 2px rgba(56, 81, 146, 0.35);
-}
-
-.questionTextarea::placeholder {
-  color: #64748b;
-  font-size: 14.7px;
-}
-
-.questionInputHint {
-  font-size: 13.5px;
-  color: #94a3b8;
+  margin-top: 2px;
+  font-size: 12px;
 }
 
 /* Footer */
@@ -219,16 +125,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .backBtn {
   background: none;
   border: none;
-  color: #cbd5e1;
-  font-size: 15.8px;
+  color: #94a3b8;
+  font-size: 14.5px;
+  font-weight: 500;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 6px 0;
   transition: color 150ms ease;
 }
 
@@ -239,9 +146,9 @@
 .startBtn {
   padding: 8px 24px;
   border-radius: 6px;
-  background: #385192;
+  background: #2563eb;
   color: #ffffff;
-  font-size: 15.8px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   border: none;
@@ -249,5 +156,5 @@
 }
 
 .startBtn:hover {
-  background: #4562ab;
+  background: #1d4ed8;
 }

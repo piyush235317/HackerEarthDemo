@@ -196,6 +196,59 @@
   flex-shrink: 0;
 }
 
+/* Assessment Demo Settings in Drawer */
+.settingsSection {
+  margin-top: 14px;
+}
+
+.settingsDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+}
+
+.settingItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.settingLabel {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.drawerInput {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 5px 8px;
+  font-size: 13.5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.drawerInput:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  cursor: pointer;
+}
+
 /* Exit Confirmation Modal */
 .modalOverlay {
   position: fixed;

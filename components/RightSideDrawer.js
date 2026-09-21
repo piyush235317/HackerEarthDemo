@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { getState, setState } from '@/lib/store';
 import ExitApplicationModal from './ExitApplicationModal';
 import styles from './RightSideDrawer.module.css';
 
@@ -9,6 +10,33 @@ export default function RightSideDrawer() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
+  const [questionCount, setQuestionCount] = useState('5');
+  const [showWatermark, setShowWatermark] = useState(true);
+
+  useEffect(() => {
+    const saved = getState();
+    if (saved?.questionCount) {
+      setQuestionCount(String(saved.questionCount));
+    }
+    if (saved?.showWatermark !== undefined) {
+      setShowWatermark(Boolean(saved.showWatermark));
+    }
+  }, [isOpen]);
+
+  const handleQuestionCountChange = (e) => {
+    const val = e.target.value;
+    setQuestionCount(val);
+    const parsed = parseInt(val.trim(), 10);
+    if (!isNaN(parsed) && parsed > 0) {
+      setState({ questionCount: Math.min(parsed, 100) });
+    }
+  };
+
+  const handleWatermarkToggle = (e) => {
+    const checked = e.target.checked;
+    setShowWatermark(checked);
+    setState({ showWatermark: checked });
+  };
 
   useEffect(() => {
     const handleOpen = () => {
@@ -143,6 +171,37 @@ export default function RightSideDrawer() {
               </svg>
               <span>Exit session</span>
             </button>
+
+            {/* Assessment Settings divider & options */}
+            <div className={styles.settingsSection}>
+              <div className={styles.settingsDivider} />
+              <div className={styles.sessionTitle}>DEMO SETTINGS</div>
+
+              <div className={styles.settingItem}>
+                <label className={styles.settingLabel} htmlFor="drawerQuestionCount">Questions (1-100):</label>
+                <input
+                  id="drawerQuestionCount"
+                  type="number"
+                  min="1"
+                  max="100"
+                  className={styles.drawerInput}
+                  value={questionCount}
+                  onChange={handleQuestionCountChange}
+                />
+              </div>
+
+              <div className={styles.settingItem}>
+                <label className={styles.checkboxLabel}>
+                  <input
+                    type="checkbox"
+                    checked={showWatermark}
+                    onChange={handleWatermarkToggle}
+                    className={styles.checkboxInput}
+                  />
+                  <span>Watermark overlay</span>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       )}

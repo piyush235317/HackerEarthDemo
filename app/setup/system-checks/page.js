@@ -77,46 +77,44 @@ export default function SystemChecksPage() {
         <div className={styles.checkRow}>
           <span className={styles.checkLabel}>Operating system</span>
           <span className={styles.checkValue}>
-            <span className={styles.greenCheck}>
-              <span className={styles.greenCheckInner}>✓</span>
-            </span>
-            {checks.os}
+            <svg className={styles.greenCheckSvg} viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8.5" stroke="#22c55e" strokeWidth="1.5" />
+              <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#22c55e" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>{checks.os}</span>
           </span>
         </div>
+
         <div className={styles.checkRow}>
           <span className={styles.checkLabel}>Browser</span>
           <span className={styles.checkValue}>
-            <span className={styles.greenCheck}>
-              <span className={styles.greenCheckInner}>✓</span>
-            </span>
-            {checks.browser}
+            <svg className={styles.greenCheckSvg} viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8.5" stroke="#22c55e" strokeWidth="1.5" />
+              <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#22c55e" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>{checks.browser}</span>
           </span>
         </div>
+
         <div className={styles.checkRow}>
           <span className={styles.checkLabel}>Cookies</span>
           <span className={styles.checkValue}>
-            <span className={styles.greenCheck}>
-              <span className={styles.greenCheckInner}>✓</span>
-            </span>
-            {checks.cookies}
+            <svg className={styles.greenCheckSvg} viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8.5" stroke="#22c55e" strokeWidth="1.5" />
+              <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#22c55e" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>{checks.cookies}</span>
           </span>
         </div>
+
         <div className={styles.checkRow}>
           <span className={styles.checkLabel}>Firebase</span>
           <span className={styles.checkValue}>
-            <span className={styles.greenCheck}>
-              <span className={styles.greenCheckInner}>✓</span>
-            </span>
-            {checks.firebase}
-          </span>
-        </div>
-        <div className={styles.checkRow}>
-          <span className={styles.checkLabel}>Webcam</span>
-          <span className={styles.checkValue}>
-            <span className={styles.greenCheck}>
-              <span className={styles.greenCheckInner}>✓</span>
-            </span>
-            Connected
+            <svg className={styles.greenCheckSvg} viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8.5" stroke="#22c55e" strokeWidth="1.5" />
+              <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#22c55e" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>{checks.firebase}</span>
           </span>
         </div>
       </div>
