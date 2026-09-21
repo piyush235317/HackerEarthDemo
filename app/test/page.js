@@ -19,6 +19,7 @@ export default function TestPage() {
   const [secondsLeft, setSecondsLeft] = useState(75 * 60); // 75 mins (4500 seconds)
   const [showEndTestModal, setShowEndTestModal] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isFullscreenWarning, setIsFullscreenWarning] = useState(false);
 
   const [splitPercent, setSplitPercent] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -40,6 +41,50 @@ export default function TestPage() {
       setShowWatermark(Boolean(saved.showWatermark));
     }
   }, []);
+
+  // Fullscreen enforcement
+  useEffect(() => {
+    const handleFsChange = () => {
+      const isFs = !!(
+        document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullscreenElement
+      );
+      setIsFullscreenWarning(!isFs);
+    };
+
+    const handleVisibility = () => {
+      if (document.visibilityState === 'hidden') {
+        setIsFullscreenWarning(true);
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFsChange);
+    document.addEventListener('webkitfullscreenchange', handleFsChange);
+    document.addEventListener('mozfullscreenchange', handleFsChange);
+    document.addEventListener('msfullscreenchange', handleFsChange);
+    document.addEventListener('visibilitychange', handleVisibility);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFsChange);
+      document.removeEventListener('webkitfullscreenchange', handleFsChange);
+      document.removeEventListener('mozfullscreenchange', handleFsChange);
+      document.removeEventListener('msfullscreenchange', handleFsChange);
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, []);
+
+  const handleReturnFullscreen = () => {
+    const el = document.documentElement;
+    const req =
+      el.requestFullscreen ||
+      el.webkitRequestFullscreen ||
+      el.mozRequestFullScreen ||
+      el.msRequestFullscreen;
+    if (req) req.call(el).catch(() => {});
+    setIsFullscreenWarning(false);
+  };
 
   const activeProblems = problemsData.slice(0, questionLimit);
 
@@ -167,6 +212,33 @@ export default function TestPage() {
 
   return (
     <div className={`${styles.pageWrapper} ${viewMode === 'solve' ? styles.pageWrapperSolve : ''}`}>
+
+      {/* Fullscreen Warning Overlay */}
+      {isFullscreenWarning && (
+        <div className={styles.fsOverlay}>
+          <div className={styles.fsCard}>
+            <div className={styles.fsIconRing}>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+            </div>
+            <h2 className={styles.fsTitle}>Fullscreen Required</h2>
+            <p className={styles.fsMessage}>
+              You have exited fullscreen mode. Please return to fullscreen to continue your test.
+              Leaving fullscreen may be flagged as a violation.
+            </p>
+            <button className={styles.fsBtn} onClick={handleReturnFullscreen}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+              </svg>
+              Return to Fullscreen
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top Bar */}
       <header className={styles.topBar}>
         <div className={styles.topBarLeft}>
