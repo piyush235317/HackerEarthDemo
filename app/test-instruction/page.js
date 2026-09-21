@@ -15,7 +15,7 @@ export default function TestInstructionPage() {
 
   const handleAccept = () => {
     if (agreed) {
-      router.push('/welcome-exl');
+      router.push('/setup/terms');
     }
   };
 

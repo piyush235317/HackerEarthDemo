@@ -43,7 +43,7 @@ export default function RightSideDrawer() {
       window.close();
     } catch (e) {}
 
-    router.push('/test-instruction');
+    router.push('/welcome-exl');
   };
 
   return (

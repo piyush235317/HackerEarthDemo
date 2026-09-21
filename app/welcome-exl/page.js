@@ -7,7 +7,7 @@ export default function WelcomeExlPage() {
   const router = useRouter();
 
   const handleStart = () => {
-    router.push('/setup/terms');
+    router.push('/test-instruction');
   };
 
   const handleDownload = () => {
