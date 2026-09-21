@@ -1,0 +1,6 @@
+# Keep these settings in Git so every deployment builds the application.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Netlify automatically installs its Next.js adapter during the build.
