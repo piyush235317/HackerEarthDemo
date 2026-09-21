@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import HackerEarthLogo from '@/components/HackerEarthLogo';
 import DiamondIcon from '@/components/DiamondIcon';
-import ExitApplicationModal from '@/components/ExitApplicationModal';
 import { problemsData } from '@/data/problemsData';
 import { getState } from '@/lib/store';
 import styles from './page.module.css';
@@ -559,12 +558,25 @@ export default function TestPage() {
         </div>
       )}
 
-      {/* Authentic SmartBrowser Exit Application Modal with 10s Timer */}
-      <ExitApplicationModal
-        isOpen={showEndTestModal}
-        onClose={() => setShowEndTestModal(false)}
-        onConfirm={handleEndTest}
-      />
+      {/* End Test Modal */}
+      {showEndTestModal && (
+        <div className={styles.modalOverlay} onClick={() => setShowEndTestModal(false)}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <h3 className={styles.modalTitle}>End Test Confirmation</h3>
+            <p className={styles.modalQuestion}>
+              Are you sure you want to end the test? You have answered {solvedCount} out of {activeProblems.length} problems.
+            </p>
+            <div className={styles.modalFooter}>
+              <button className={styles.cancelBtn} onClick={() => setShowEndTestModal(false)}>
+                Cancel
+              </button>
+              <button className={styles.endTestBtn} onClick={handleEndTest}>
+                Confirm & End Test
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
