@@ -10,11 +10,15 @@ export default function ProctoringPage() {
   const [countdown, setCountdown] = useState(53);
   const [canStart, setCanStart] = useState(false);
   const [questionCount, setQuestionCount] = useState('100');
+  const [showWatermark, setShowWatermark] = useState(true);
 
   useEffect(() => {
     const saved = getState();
     if (saved?.questionCount) {
       setQuestionCount(String(saved.questionCount));
+    }
+    if (saved?.showWatermark !== undefined) {
+      setShowWatermark(Boolean(saved.showWatermark));
     }
   }, []);
 
@@ -51,10 +55,16 @@ export default function ProctoringPage() {
     }
   };
 
+  const handleWatermarkToggle = (e) => {
+    const checked = e.target.checked;
+    setShowWatermark(checked);
+    setState({ showWatermark: checked });
+  };
+
   const handleStartTest = () => {
     const parsed = parseInt(questionCount.toString().trim(), 10);
     const count = !isNaN(parsed) && parsed > 0 ? Math.min(parsed, 100) : 100;
-    setState({ proctoringReviewed: true, testStarted: true, questionCount: count });
+    setState({ proctoringReviewed: true, testStarted: true, questionCount: count, showWatermark });
     try {
       document.documentElement.requestFullscreen?.();
     } catch (e) {
@@ -131,21 +141,49 @@ export default function ProctoringPage() {
         </div>
       </div>
 
-      {/* Question Count Input Section */}
+      {/* Question Count Input & Watermark Toggle Section */}
       <div className={styles.questionInputContainer}>
-        <label htmlFor="questionCountInput" className={styles.questionInputLabel}>
-          Number of questions to show in test:
-        </label>
-        <textarea
-          id="questionCountInput"
-          className={styles.questionTextarea}
-          rows={1}
-          value={questionCount}
-          onChange={handleQuestionCountChange}
-          placeholder="e.g. 100"
-        />
-        <div className={styles.questionInputHint}>
-          Enter the number of questions you want to appear in the question paper (1 - 100).
+        <div className={styles.inputAndToggleRow}>
+          <div className={styles.questionInputGroup}>
+            <label htmlFor="questionCountInput" className={styles.questionInputLabel}>
+              Number of questions to show in test:
+            </label>
+            <textarea
+              id="questionCountInput"
+              className={styles.questionTextarea}
+              rows={1}
+              value={questionCount}
+              onChange={handleQuestionCountChange}
+              placeholder="e.g. 100"
+            />
+            <div className={styles.questionInputHint}>
+              Enter questions count (1 - 100).
+            </div>
+          </div>
+
+          <div className={styles.watermarkToggleGroup}>
+            <span className={styles.watermarkGroupTitle}>Watermark security:</span>
+            <label className={styles.watermarkCheckboxLabel}>
+              <input
+                type="checkbox"
+                id="watermarkToggleCheckbox"
+                className={styles.watermarkCheckbox}
+                checked={showWatermark}
+                onChange={handleWatermarkToggle}
+              />
+              <span className={styles.watermarkCustomBox}>
+                {showWatermark && (
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                )}
+              </span>
+              <span className={styles.watermarkLabelText}>Enable watermark overlay</span>
+            </label>
+            <div className={styles.watermarkToggleHint}>
+              Toggle email &amp; timestamp overlay in test
+            </div>
+          </div>
         </div>
       </div>
 

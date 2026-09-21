@@ -23,6 +23,7 @@ export default function TestPage() {
   const [splitPercent, setSplitPercent] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const [questionLimit, setQuestionLimit] = useState(100);
+  const [showWatermark, setShowWatermark] = useState(true);
   const panesWrapperRef = useRef(null);
   const activeQuestionRef = useRef(null);
   const sideQuestionListRef = useRef(null);
@@ -34,6 +35,9 @@ export default function TestPage() {
       if (!isNaN(parsed) && parsed > 0) {
         setQuestionLimit(Math.min(parsed, problemsData.length));
       }
+    }
+    if (saved?.showWatermark !== undefined) {
+      setShowWatermark(Boolean(saved.showWatermark));
     }
   }, []);
 
@@ -398,14 +402,16 @@ export default function TestPage() {
               >
                 <div className={styles.questionScrollArea}>
                   {/* Watermark */}
-                  <div className={styles.watermarkContainer}>
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className={styles.watermarkItem}>
-                        <div>anandbhansinghchouhan@gmail.com</div>
-                        <div>2026-09-21 19:11 • UTC</div>
-                      </div>
-                    ))}
-                  </div>
+                  {showWatermark && (
+                    <div className={styles.watermarkContainer}>
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className={styles.watermarkItem}>
+                          <div>anandbhansinghchouhan@gmail.com</div>
+                          <div>2026-09-21 19:11 • UTC</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
                   <div className={styles.questionHeader}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -506,14 +512,16 @@ export default function TestPage() {
                 style={{ width: `${100 - splitPercent}%`, flex: 'none' }}
               >
                 {/* Watermark */}
-                <div className={styles.watermarkContainer}>
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className={styles.watermarkItem}>
-                      <div>anandbhansinghchouhan@gmail.com</div>
-                      <div>2026-09-21 19:11 • UTC</div>
-                    </div>
-                  ))}
-                </div>
+                {showWatermark && (
+                  <div className={styles.watermarkContainer}>
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className={styles.watermarkItem}>
+                        <div>anandbhansinghchouhan@gmail.com</div>
+                        <div>2026-09-21 19:11 • UTC</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <div className={styles.answerTitle}>
                   Select your answer to the problem below
